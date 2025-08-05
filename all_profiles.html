@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block title %}All Profiles{% endblock %}
+
+{% block content %}
+<h1 style="font-family: 'Creepster', cursive; font-size: 48px;">Survivor Roster</h1>
+
+<div class="controls">
+  <input type="text" id="searchInput" placeholder="Search by name, role, location, status..." />
+  <select id="sortSelect" onchange="sortProfiles(this.value)">
+    <option value="name" {% if request.args.get('sort_by') == 'name' %}selected{% endif %}>Sort by Name</option>
+    <option value="role" {% if request.args.get('sort_by') == 'role' %}selected{% endif %}>Sort by Role</option>
+    <option value="status" {% if request.args.get('sort_by') == 'status' %}selected{% endif %}>Sort by Status</option>
+  </select>
+</div>
+
+<div class="profile-grid" id="profileGrid">
+  {% for p in profiles %}
+    <div class="profile-card">
+      <h2>{{ p.name }}</h2>
+      <p><strong>🎭 Role:</strong> {{ p.role }}</p>
+      <p><strong>🛠️ Skills:</strong> {{ p.skills | join(', ') }}</p>
+      <p><strong>📍 Location:</strong> {{ p.location }}</p>
+      <p><strong>📊 Status:</strong> {{ p.status }}</p>
+      <p><strong>📶 Health status:</strong> {{ p.health_status }}</p>
+      <p><strong>🎂 Age:</strong> {{ p.age }}</p>
+      <p><strong>📞 Contact:</strong> {{ p.contact }}</p>
+      <p><strong>📡 Emergency:</strong> {{ p.emergency }}</p>
+
+      <a href="/edit-profile/{{ p.id }}">
+        <button class="edit-btn">Edit</button>
+      </a>
+      <a href="{{ url_for('profile_details', id=p.id) }}">
+        <button class="details-btn">Details</button>
+      </a>
+      <button class="delete-btn" onclick="confirmDelete('{{ p.id }}', '{{ p.name | escape }}')">Delete</button>
+    </div>
+  {% endfor %}
+</div>
+
+<script>
+  function sortProfiles(sortBy) {
+    window.location.href = `/all-profiles?sort_by=${sortBy}`;
+  }
+
+  function confirmDelete(id, name) {
+    if (confirm(`Are you sure you want to delete ${name}'s profile? This cannot be undone.`)) {
+      fetch(`/delete-profile/${encodeURIComponent(id)}`, { method: 'POST' })
+        .then(res => {
+          if (res.ok) window.location.reload();
+          else alert("Failed to delete profile.");
+        });
+    }
+  }
+
+  document.getElementById("searchInput").addEventListener("input", function () {
+    const term = this.value.toLowerCase();
+    const cards = document.querySelectorAll(".profile-card");
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(term) ? "block" : "none";
+    });
+  });
+</script>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div style="background-color:#661818; padding:10px; border-radius:6px; margin-bottom:20px; color:white;">
+      {% for message in messages %}
+        <p>{{ message }}</p>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
+<style>
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .controls input, .controls select {
+    padding: 8px;
+    background-color: #2a2a3f;
+    border: 1px solid #444;
+    color: #e8e8e8;
+    border-radius: 4px;
+  }
+
+  .profile-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .profile-card {
+    background-color: #2a2a3f;
+    border: 1px solid #444;
+    border-left: 5px solid #19452c;
+    padding: 15px;
+    width: 300px;
+    border-radius: 6px;
+    transition: transform 0.2s;
+  }
+
+  .profile-card:hover {
+    transform: scale(1.02);
+  }
+
+  .profile-card h2 {
+    margin: 0 0 5px;
+  }
+
+  .profile-card p {
+    margin: 4px 0;
+  }
+
+  .delete-btn, .edit-btn, .details-btn {
+    border: none;
+    padding: 6px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    color: white;
+  }
+
+  .delete-btn {
+    background-color: #661818;
+  }
+
+  .edit-btn {
+    background-color: #19452c;
+    margin-right: 5px;
+  }
+
+  .details-btn {
+    background-color: #444476;
+    margin-left: 5px;
+  }
+</style>
+{% endblock %}

@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}Search & Filter - Survivor System{% endblock %}
+
+{% block content %}
+<h1>🔍 Search & Filter Survivors</h1>
+
+<form method="GET" action="/search" id="searchForm">
+  <label for="query">Search by Name:</label>
+  <input type="text" name="query" id="query" placeholder="Enter name..." value="{{ request.args.get('query', '') }}">
+
+  <label for="role">Filter by Role:</label>
+  <input list="roles" name="role" id="role" value="{{ request.args.get('role', '') }}">
+  <datalist id="roles">
+    {% for r in [
+      'Civilian', 'Medic', 'Fighter', 'Scientist', 'Engineer', 'Scout', 'Leader', 'Cook', 'Sniper',
+      'Mechanic', 'Farmer', 'Hacker', 'Driver', 'Guard', 'Technician', 'Survivalist', 'Tracker',
+      'Builder', 'Pilot', 'Navigator', 'Blacksmith', 'Herbalist', 'Hunter', 'Demolition Expert',
+      'Electrician', 'Radio Operator', 'Biologist', 'Chemist', 'Weapons Expert', 'First Responder',
+      'Rescuer', 'Explorer', 'Strategist', 'Scavenger', 'Carpenter', 'Tailor', 'Logistics Officer', 'Spy'
+    ] %}
+      <option value="{{ r }}">
+    {% endfor %}
+  </datalist>
+
+  <label for="location">Filter by Location:</label>
+  <input type="text" name="location" id="location" placeholder="Enter location..." value="{{ request.args.get('location', '') }}">
+
+  <label for="status">Filter by Status:</label>
+  <select name="status" id="status">
+    <option value="">-- Any --</option>
+    {% for s in ['Alive', 'Injured', 'Zombie', 'Missing'] %}
+      <option value="{{ s }}" {% if request.args.get('status') == s %}selected{% endif %}>{{ s }}</option>
+    {% endfor %}
+  </select>
+
+  <label for="health_status">Filter by Health Status:</label>
+  <select name="health_status" id="health_status">
+    <option value="">-- Any --</option>
+    {% for p in ['Low', 'Medium', 'High', 'Critical'] %}
+      <option value="{{ p }}" {% if request.args.get('health_status') == p %}selected{% endif %}>{{ p }}</option>
+    {% endfor %}
+  </select>
+
+  <button type="submit">🔎 Search</button>
+  <a href="/search" class="button" style="margin-left: 10px;">Reset</a>
+</form>
+
+<hr>
+
+{% if results is defined %}
+  <h2>{{ results|length }} Survivor{{ '' if results|length == 1 else 's' }} Found</h2>
+  {% if results %}
+    <ul>
+      {% for profile in results %}
+        <li>
+          <strong>{{ profile.name }}</strong>
+          – 🛠️ {{ profile.role or 'Civilian' }},
+          ❤️ {{ profile.status }},
+          📍 {{ profile.location or 'Unknown' }},
+          ⚠️ {{ profile.health_status or 'Low' }}
+          <a href="{{ url_for('profile_details', id=profile.id) }}" class="button">Details</a>
+
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No survivors match the search criteria.</p>
+  {% endif %}
+{% endif %}
+
+<style>
+  form {
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+
+  input, select, button {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+    background-color: #2a2a3f;
+    border: 1px solid #444;
+    color: #e8e8e8;
+    border-radius: 4px;
+  }
+
+  .button {
+    background-color: #333c57;
+    padding: 8px 12px;
+    display: inline-block;
+    text-decoration: none;
+    color: #e0e0e0;
+    border-radius: 4px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+  }
+
+  li {
+    padding: 6px 0;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 600px) {
+    input, select, button {
+      font-size: 16px;
+    }
+    form {
+      padding: 0 10px;
+    }
+  }
+</style>
+{% endblock %}

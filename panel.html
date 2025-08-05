@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% block title %}⚙️ Tag Panel{% endblock %}
+
+{% block content %}
+<style>
+  h1 {
+    font-family: "Creepster", cursive;
+    font-size: 3em;
+    color: #146b3a;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    color: #e8e8e8;
+    margin-top: 30px;
+    border-bottom: 2px solid #146b3a;
+    padding-bottom: 5px;
+    cursor: pointer;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  th, td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: left;
+    background-color: rgba(30, 30, 47, 0.9);
+    color: #e8e8e8;
+  }
+
+  th {
+    background-color: #19452c;
+  }
+
+  .group {
+    margin-bottom: 30px;
+  }
+
+  .stats {
+    background-color: #19452c;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.1em;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .group:hover {
+    border-left: 4px solid #661818;
+    padding-left: 6px;
+  }
+</style>
+
+<h1>🗂️ Tag Panel</h1>
+<div id="stats" class="stats"></div>
+<div id="groups"></div>
+
+<script>
+  fetch("/get-tags").then(r => r.json()).then(tags => {
+    const counts = {};
+    const groups = {};
+
+    tags.forEach(t => {
+      counts[t.tag] = (counts[t.tag] || 0) + 1;
+      if (!groups[t.tag]) groups[t.tag] = [];
+      groups[t.tag].push(t);
+    });
+
+    // Show stats summary
+    document.getElementById("stats").innerHTML = Object.entries(counts)
+      .map(([k, v]) => `<strong>${k}</strong>: ${v}`)
+      .join(" | ");
+
+    // Render grouped tables
+    const container = document.getElementById("groups");
+    Object.entries(groups).forEach(([tag, tagList]) => {
+      const section = document.createElement("div");
+      section.className = "group";
+
+      const heading = document.createElement("h2");
+      heading.textContent = `📍 ${tag}`;
+      heading.onclick = () => {
+        table.classList.toggle("hidden");
+      };
+
+      const table = document.createElement("table");
+      const headerRow = `
+        <tr>
+          <th>User</th>
+          <th>Time</th>
+          <th>Status</th>
+          <th>Upvotes</th>
+          <th>Downvotes</th>
+        </tr>`;
+      const rows = tagList.map(t => `
+        <tr>
+          <td>${t.user_id}</td>
+          <td>${new Date(t.timestamp).toLocaleString()}</td>
+          <td>${t.status || "Pending"}</td>
+          <td>${t.up || 0}</td>
+          <td>${t.down || 0}</td>
+        </tr>`).join("");
+
+      table.innerHTML = headerRow + rows;
+      section.appendChild(heading);
+      section.appendChild(table);
+      container.appendChild(section);
+    });
+  });
+</script>
+{% endblock %}

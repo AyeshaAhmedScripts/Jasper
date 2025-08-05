@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}{{ profile.name }}'s Details{% endblock %}
+
+{% block content %}
+<h1 style="font-family: 'Creepster', cursive; font-size: 42px; margin-bottom: 20px;">
+  {{ profile.name }}'s Profile
+</h1>
+
+<div class="details-container" style="
+  background-color: #2a2a3f;
+  border: 1px solid #444;
+  padding: 25px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #e8e8e8;
+  font-family: Arial, sans-serif;
+">
+  <p><strong>🎭 Role:</strong> {{ profile.role }}</p>
+  <p><strong>🛠️ Skills:</strong> {{ profile.skills | join(', ') }}</p>
+  <p><strong>📍 Location:</strong> {{ profile.location }}</p>
+  <p><strong>📊 Status:</strong> {{ profile.status }}</p>
+  <p><strong>📶 Health Status Level:</strong> {{ profile.health_status }}</p>
+  <p><strong>🎂 Age:</strong> {{ profile.age }}</p>
+  <p><strong>📞 Contact:</strong> {{ profile.contact }}</p>
+  <p><strong>📡 Emergency:</strong> {{ profile.emergency }}</p>
+
+  <p><strong>📝 Description:</strong><br />
+    <span style="white-space: pre-line;">
+      {% if profile.description %}
+        {{ profile.description }}
+      {% else %}
+        <em>No description provided.</em>
+      {% endif %}
+    </span>
+  </p>
+</div>
+
+<a class="back-btn" href="/all-profiles" style="
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 15px;
+  background-color: #444476;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+">
+  ← Back to All Profiles
+</a>
+{% endblock %}
