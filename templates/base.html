@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Zombie Survivor System{% endblock %}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    body {
+      font-family: 'Times New Roman', serif;
+      background-color: #1e1e2f;
+      color: #e8e8e8;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #19452c;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #e8e8e8;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      font-family: 'Creepster', cursive;
+      font-size: 48px;
+      text-align: center;
+      margin: 40px 0;
+      color: #e8e8e8;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      margin: 15px;
+      background-color: #19452c;
+      color: #e8e8e8;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 20px;
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #146b3a;
+    }
+
+    main {
+      padding: 40px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 10px 15px;
+        gap: 10px;
+      }
+
+      nav a {
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 36px;
+        margin: 30px 0;
+      }
+
+      .button {
+        font-size: 18px;
+        padding: 12px 24px;
+        margin: 10px;
+      }
+
+      main {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .button {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="{{ url_for('home') }}">🏠 Home</a>
+    <a href="{{ url_for('add_profile') }}">➕ Add Profile</a>
+    <a href="{{ url_for('all_profiles') }}">📋 View All Profiles</a>
+    <a href="{{ url_for('dashboard') }}">📊 Dashboard</a>
+    <a href="{{ url_for('search_filter') }}">🔍 Search & Filter</a>
+    <a href="{{ url_for('map_page') }}">🗺️ Map View</a>
+    <a href="{{ url_for('panel') }}">🎛️ Tag Panel</a>
+  </nav>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Survivor Stats{% endblock %}
+
+{% block content %}
+<h1>📊 Survivor Dashboard</h1>
+
+<div class="dashboard-container">
+  <div class="stat-box">👥 Total Survivors: <strong>{{ total }}</strong></div>
+  <div class="stat-box">✅ Alive: <strong>{{ status_counts.get('Alive', 0) }}</strong></div>
+  <div class="stat-box">🩸 Injured: <strong>{{ status_counts.get('Injured', 0) }}</strong></div>
+  <div class="stat-box">🧟 Zombie: <strong>{{ status_counts.get('Zombie', 0) }}</strong></div>
+  <div class="stat-box">❓ Missing: <strong>{{ status_counts.get('Missing', 0) }}</strong></div>
+</div>
+
+<canvas id="statusChart" width="400" height="200"></canvas>
+<canvas id="health_statusChart" width="400" height="200" style="margin-top: 40px;"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const statusCtx = document.getElementById('statusChart').getContext('2d');
+  const statusChart = new Chart(statusCtx, {
+    type: 'pie',
+    data: {
+      labels: ['Alive', 'Injured', 'Zombie', 'Missing'],
+      datasets: [{
+        label: 'Survivor Status',
+        data: [
+          {{ status_counts.get('Alive', 0) }},
+          {{ status_counts.get('Injured', 0) }},
+          {{ status_counts.get('Zombie', 0) }},
+          {{ status_counts.get('Missing', 0) }}
+        ],
+        backgroundColor: ['#146b3a', '#8a2727', '#602985', '#9e9e9e'],
+      }]
+    }
+  });
+
+  const health_statusCtx = document.getElementById('health_statusChart').getContext('2d');
+  const health_statusChart = new Chart(health_statusCtx, {
+    type: 'bar',
+    data: {
+      labels: ['Low', 'Medium', 'High', 'Critical'],
+      datasets: [{
+        label: 'Health Status',
+        data: [
+          {{ health_status_counts.get('Low', 0) }},
+          {{ health_status_counts.get('Medium', 0) }},
+          {{ health_status_counts.get('High', 0) }},
+          {{ health_status_counts.get('Critical', 0) }}
+        ],
+        backgroundColor: ['#47944b', '#ba7734', '#d32f2f', '#8c1f1f'],
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: {
+            stepSize: 1
+          }
+        }
+      }
+    }
+  });
+</script>
+
+<style>
+  .dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  .stat-box {
+    background-color: #2a2a3f;
+    border: 1px solid #444;
+    padding: 15px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    flex: 1 1 200px;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .stat-box {
+      font-size: 14px;
+      padding: 12px;
+    }
+
+    canvas {
+      max-width: 100%;
+    }
+  }
+</style>
+{% endblock %}

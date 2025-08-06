@@ -1,0 +1,200 @@
+[
+  {
+    "id": "c63709e0-f3d1-4423-88d5-cb394a58ef6a",
+    "user_id": "user-123",
+    "lat": 24.968730798186066,
+    "lng": 67.18764066696168,
+    "tag": "\ud83d\udcde Medical Emergency",
+    "status": "Pending",
+    "timestamp": 1754310775161,
+    "up": 0,
+    "down": 0
+  },
+  {
+    "id": "67fb7969-87ca-44a9-ba3c-433c39e68128",
+    "user_id": "user-123",
+    "lat": 24.948040808285644,
+    "lng": 67.17916488647462,
+    "tag": "\ud83d\udcde Medical Emergency",
+    "status": "Pending",
+    "timestamp": 1754310779996,
+    "up": 0,
+    "down": 0
+  },
+  {
+    "id": "7724f3d9-f7a7-4f9b-97a2-283fed12f356",
+    "user_id": "user-123",
+    "lat": 24.963277325452857,
+    "lng": 67.15195655822755,
+    "tag": "\ud83c\udf54 Food",
+    "status": "Pending",
+    "timestamp": 1754310785795,
+    "up": 0,
+    "down": 0
+  },
+  {
+    "id": "0dd5ae03-e08b-4903-bb03-9f6cb568e219",
+    "user_id": "user-123",
+    "lat": 24.960090250788948,
+    "lng": 67.19633102416994,
+    "tag": "\ud83c\udf54 Food",
+    "status": "Pending",
+    "timestamp": 1754310788839,
+    "up": 0,
+    "down": 0
+  },
+  {
+    "id": "043ae69e-7878-4396-bd81-f483216132b2",
+    "user_id": "user-123",
+    "lat": 24.97571390049212,
+    "lng": 67.1488666534424,
+    "tag": "\u274c Dangerous",
+    "status": "Pending",
+    "timestamp": 1754310794814,
+    "up": 0,
+    "down": 0
+  },
+  {
+    "id": "ae311ed9-e83a-482a-bdfb-1e3a01a8c422",
+    "user_id": "user-123",
+    "lat": 24.969340312815476,
+    "lng": 67.20474243164064,
+    "tag": "\u274c Dangerous",
+    "status": "Pending",
+    "timestamp": 1754310801553,
+    "up": 0,
+    "down": 0
+  },
+  {
+    "id": "ab65e7ed-9c83-468a-9cef-47cd136fb8f6",
+    "user_id": "user-123",
+    "lat": 24.968951668740093,
+    "lng": 67.13479042053224,
+    "tag": "\ud83d\udca7 Water",
+    "status": "Pending",
+    "timestamp": 1754310810758,
+    "up": 0,
+    "down": 0
+  },
+  {
+    "id": "9b2bda8c-a015-4641-838a-fbbb77561272",
+    "user_id": "user-123",
+    "lat": 24.96700842995013,
+    "lng": 67.16011047363283,
+    "tag": "\ud83c\udfe0 Shelter",
+    "status": "Pending",
+    "timestamp": 1754310820202,
+    "up": 2,
+    "down": 0
+  },
+  {
+    "id": "4e01dd29-335a-43bd-b22d-4b6964aee137",
+    "user_id": "user-123",
+    "lat": 24.960712125496077,
+    "lng": 67.133846282959,
+    "tag": "\ud83c\udfe0 Shelter",
+    "status": "Pending",
+    "timestamp": 1754310824340,
+    "up": 0,
+    "down": 0
+  },
+  {
+    "id": "22bb0dc9-afcb-489b-80b5-b4d8a3ae9815",
+    "user_id": "user-123",
+    "lat": 24.966386587056157,
+    "lng": 67.13659286499025,
+    "tag": "\u26a0\ufe0f Caution Zone",
+    "status": "Pending",
+    "timestamp": 1754310831555,
+    "up": 0,
+    "down": 0
+  },
+  {
+    "id": "ce04d12a-dc25-4ec6-abda-07ec8b87f333",
+    "user_id": "user-123",
+    "lat": 24.950139828239557,
+    "lng": 67.20285415649415,
+    "tag": "\u26a0\ufe0f Caution Zone",
+    "status": "Pending",
+    "timestamp": 1754310834450,
+    "up": 0,
+    "down": 0
+  },
+  {
+    "id": "2e3af57c-443d-422a-a497-397ca43071b4",
+    "user_id": "user-123",
+    "lat": 24.98373107892052,
+    "lng": 67.13436126708986,
+    "tag": "\u2705 Safe",
+    "status": "Pending",
+    "timestamp": 1754396463381,
+    "up": 0,
+    "down": 0
+  },
+  {
+    "id": "cecbf9fe-0c82-4166-9457-39ed515e2262",
+    "user_id": "user-123",
+    "lat": 24.97462001016795,
+    "lng": 67.16895103454591,
+    "tag": "\u2705 Safe",
+    "status": "Pending",
+    "timestamp": 1754399105762,
+    "up": 0,
+    "down": 0
+  },
+  {
+    "id": "cc1228b7-6d65-4d27-b6ef-4418d387cbeb",
+    "user_id": "user-123",
+    "lat": 24.96563475974094,
+    "lng": 67.17028945684434,
+    "tag": "\ud83d\udcdd Shop",
+    "status": "Pending",
+    "timestamp": 1754401366318,
+    "up": 0,
+    "down": 0
+  },
+  {
+    "id": "ba81a17d-6c12-4e7b-9ba3-f049c35b94c3",
+    "user_id": "user-123",
+    "lat": 24.969997912865516,
+    "lng": 67.18208312988283,
+    "tag": "\u274c Dangerous",
+    "status": "Pending",
+    "timestamp": 1754403570359,
+    "up": 0,
+    "down": 0
+  },
+  {
+    "id": "1d8e3ff0-0cb4-4572-aa65-776b89d231b8",
+    "user_id": "user-123",
+    "lat": 24.956890005823357,
+    "lng": 67.17895030975343,
+    "tag": "\u2705 Safe",
+    "status": "Pending",
+    "timestamp": 1754416508603,
+    "up": 0,
+    "down": 0
+  },
+  {
+    "id": "cfbdf56c-dd55-4261-b686-116b849fb14e",
+    "user_id": "user-123",
+    "lat": 24.951402080664412,
+    "lng": 67.19165325164796,
+    "tag": "\ud83d\udcde Medical Emergency",
+    "status": "Pending",
+    "timestamp": 1754416583241,
+    "up": 0,
+    "down": 0
+  },
+  {
+    "id": "f3402195-f9ac-49fe-9b0a-7afd2e8c3536",
+    "user_id": "user-123",
+    "lat": 24.954434371070658,
+    "lng": 67.17101097106935,
+    "tag": "\ud83d\udca7 Water",
+    "status": "Pending",
+    "timestamp": 1754418625036,
+    "up": 0,
+    "down": 0
+  }
+]
