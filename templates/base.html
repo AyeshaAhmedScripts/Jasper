@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>{% block title %}Zombie Survivor System{% endblock %}</title>
   <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
   <style>
     body {
       font-family: 'Times New Roman', serif;
@@ -17,25 +20,76 @@
 
     nav {
       background-color: #19452c;
-      padding: 15px 30px;
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
-      gap: 15px;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px 30px;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
 
-    nav a {
-      color: #e8e8e8;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 18px;
+    .dropdown {
+      position: relative;
+      display: inline-block;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .dropbtn {
+      background: none;
+      color: #e8e8e8;
+      font-weight: bold;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      padding: 10px 16px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .dropbtn:hover {
+      background-color: #276b3d;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #2c2c3f;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+      z-index: 1;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      color: #e8e8e8;
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #276b3d;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .nav-direct {
+      color: #e8e8e8;
+      font-weight: bold;
+      font-size: 18px;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .nav-direct:hover {
+      background-color: #276b3d;
     }
 
     h1 {
@@ -70,36 +124,25 @@
 
     @media (max-width: 768px) {
       nav {
-        padding: 10px 15px;
+        flex-direction: column;
+        align-items: center;
         gap: 10px;
       }
 
-      nav a {
-        font-size: 16px;
-      }
-
-      h1 {
-        font-size: 36px;
-        margin: 30px 0;
-      }
-
-      .button {
-        font-size: 18px;
-        padding: 12px 24px;
-        margin: 10px;
-      }
-
-      main {
-        padding: 20px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .button {
-        display: block;
+      .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border: 1px solid #333;
         width: 100%;
-        max-width: 300px;
-        margin: 10px auto;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .nav-direct {
+        width: 100%;
+        text-align: center;
       }
     }
   </style>
@@ -107,18 +150,37 @@
 <body>
 
   <nav>
-    <a href="{{ url_for('home') }}">🏠 Home</a>
-    <a href="{{ url_for('add_profile') }}">➕ Add Profile</a>
-    <a href="{{ url_for('all_profiles') }}">📋 View All Profiles</a>
-    <a href="{{ url_for('dashboard') }}">📊 Dashboard</a>
-    <a href="{{ url_for('search_filter') }}">🔍 Search & Filter</a>
-    <a href="{{ url_for('map_page') }}">🗺️ Map View</a>
-    <a href="{{ url_for('panel') }}">🎛️ Tag Panel</a>
+    <!-- Group 1: Profiles -->
+    <div class="dropdown">
+      <button class="dropbtn">📁 Profiles</button>
+      <div class="dropdown-content">
+   
+        <a href="{{ url_for('add_profile') }}">➕ Add Profile</a>
+        <a href="{{ url_for('all_profiles') }}">📋 View All Profiles</a>
+        <a href="{{ url_for('search_filter') }}">🔍 Search & Filter</a>
+        <a href="{{ url_for('dashboard') }}">📊 Dashboard</a>
+      </div>
+    </div>
+
+    <!-- Group 2: Map -->
+    <div class="dropdown">
+      <button class="dropbtn">🗺️ Map</button>
+      <div class="dropdown-content">
+        <a href="{{ url_for('map_page') }}">🗺️ Map View</a>
+        <a href="{{ url_for('panel') }}">🎛️ Tag Panel</a>
+      </div>
+    </div>
+
+    <!-- Group 3: Jasper (Direct link) -->
+    <a class="nav-direct" href="{{ url_for('ai_front') }}">🤖 Jasper</a>
   </nav>
 
   <main>
+  <div class="wrapper">
     {% block content %}{% endblock %}
-  </main>
+  </div>
+</main>
+
 
 </body>
 </html>

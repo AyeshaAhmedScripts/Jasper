@@ -1,8 +1,9 @@
-import json
+# generate_profile.py
 import random
 import uuid
-import os
+from app import db, Survivor  # Import your db and Survivor model from app.py
 
+# --- Data Pools ---
 first_names = [
     "Aiden", "Lara", "Marcus", "Jasmine", "Tanya", "Carlos", "Nina", "Eli", "Grace", "Zane",
     "Leila", "Victor", "Dia", "Rosa", "Noah", "Harper", "Ivy", "Mason", "Riley", "Liam"
@@ -25,13 +26,17 @@ skills_pool = [
 ]
 
 statuses = ["Alive", "Injured", "Zombie", "Missing"]
-priorities = ["Low", "Medium", "High", "Critical"]
+health_levels = ["Low", "Medium", "High", "Critical"]
 locations = ["Zone A", "Zone B", "Safehouse", "Tower Ruins", "Camp Echo", "Sector 5"]
 
 used_names = set()
 
+# --- Helper Functions ---
 def capitalize_words(text):
-    return ' '.join(word.capitalize() for word in text.split())
+    return ' '.join(word.capitalize() for word in text.strip().split())
+
+def generate_unique_id():
+    return str(uuid.uuid4())
 
 def generate_profile():
     while True:
@@ -41,55 +46,34 @@ def generate_profile():
             break
 
     role = random.choice(roles)
-    skills = random.sample(skills_pool, random.randint(2, 4))
+    skills = ', '.join(random.sample(skills_pool, random.randint(2, 4)))
     location = random.choice(locations)
     status = random.choice(statuses)
-    priority = random.choice(priorities)
+    health_status = random.choice(health_levels)
     age = random.randint(16, 70)
     contact = f"+92-3{random.randint(100000000, 999999999)}"
     emergency = f"Channel-{random.randint(1, 10)}"
-    description = f"{full_name} is a skilled {role.lower()} known for {random.choice(skills).lower()} and {random.choice(skills).lower()}."
+    description = f"{full_name} is a skilled {role.lower()} known for {random.choice(skills_pool).lower()} and {random.choice(skills_pool).lower()}."
 
-    return {
-        "id": str(uuid.uuid4()),
-        "name": full_name,
-        "role": role,
-        "skills": skills,
-        "location": location,
-        "status": status,
-        "priority": priority,
-        "age": age,
-        "contact": contact,
-        "emergency": emergency,
-        "description": description
-    }
+    return Survivor(
+        id=generate_unique_id(),
+        name=full_name,
+        role=role,
+        skills=skills,
+        location=location,
+        status=status,
+        health_status=health_status,
+        age=age,
+        contact=contact,
+        emergency=emergency,
+        description=description
+    )
 
-def create_demo_profiles(path='profiles.json', count=110, overwrite=True):
-    profiles = []
-
-    if os.path.exists(path) and not overwrite:
-        with open(path, 'r') as f:
-            try:
-                profiles = json.load(f)
-                for profile in profiles:
-                    used_names.add(profile["name"])
-            except json.JSONDecodeError:
-                profiles = []
-
-    new_profiles = []
-    while len(new_profiles) < count:
+# --- Main Execution ---
+if __name__ == "__main__":
+    print("Generating 10 random survivor profiles...")
+    for _ in range(10):
         profile = generate_profile()
-        new_profiles.append(profile)
-
-    if overwrite:
-        profiles = new_profiles
-    else:
-        profiles.extend(new_profiles)
-
-    with open(path, 'w') as f:
-        json.dump(profiles, f, indent=2)
-
-    print(f"{count} unique demo survivor profiles {'created' if overwrite else 'added'} in '{path}'.")
-
-if __name__ == '__main__':
-    create_demo_profiles()
+        db.session.add(profile)
+    db.session.commit()
+    print("✅ Successfully added 10 demo profiles to the database.")

@@ -1,0 +1,757 @@
+{
+  "categories": [
+    {
+      "name": "greetings",
+      "keywords": ["hello", "hi", "hey", "yo", "greetings"],
+      "responses": [
+        "Hey there, survivor. How are you holding up?",
+        "Good to hear from you. Stay sharp out there."
+      ]
+    },
+    {
+      "name": "medicine",
+      "keywords": ["medicine", "medkit", "first aid", "bandage", "heal", "infection", "bleeding", "suture", "splint"],
+      "responses": [
+        "For bleeding, apply firm direct pressure and elevate the limb; use a tourniquet only as last resort.",
+        "Clean wounds with boiled/purified water and antiseptic. Keep wounds covered and watch for infection.",
+        "If bones look deformed, immobilize with a splint and seek help; don't attempt to reset unless trained."
+      ]
+    },
+    {
+      "name": "combat",
+      "keywords": ["weapon", "weapons", "fight", "combat", "attack", "defend", "headshot", "ambush"],
+      "responses": [
+        "Aim for the head: destroying the brain neutralizes zombies. Conserve ammo.",
+        "Prefer silent melee weapons (crowbar, machete) to avoid attracting others.",
+        "Use choke points and high ground for ambushes; always plan an escape route."
+      ]
+    },
+    {
+      "name": "hiding",
+      "keywords": ["hide", "stealth", "conceal", "camouflage", "sneak", "cover", "attic", "cellar"],
+      "responses": [
+        "Choose hiding spots with multiple exits and natural concealment; avoid high-traffic areas.",
+        "Move slowly, stay low, and minimize noise — silence is your friend.",
+        "Mask smells with mud or strong, consistent local odors; avoid perfumes."
+      ]
+    },
+    {
+      "name": "food",
+      "keywords": ["food", "water", "forage", "scavenge", "hunt", "preserve", "cook"],
+      "responses": [
+        "Prioritize water purification: boil 1+ minute, or filter with charcoal/sand.",
+        "Canned goods, rice, beans, and peanut butter last. Ration portions and rotate supplies.",
+        "Forage known safe plants; avoid mushrooms unless 100% certain."
+      ]
+    },
+    {
+      "name": "adaptability",
+      "keywords": ["mental", "mindset", "resilience", "adapt", "survive", "routine"],
+      "responses": [
+        "Keep routines to preserve mental health: tasks, training, and small goals every day.",
+        "Assign roles and responsibilities in groups to reduce chaos and improve efficiency.",
+        "Prepare contingency plans for every mission — always have a fallback."
+      ]
+    },
+    {
+      "name": "tools",
+      "keywords": ["tools", "gear", "backpack", "pack", "multitool", "flashlight", "filter", "duct tape"],
+      "responses": [
+        "Essential kit: water filter, multitool, knife, firestarter, flashlight, spare batteries, duct tape, basic medkit.",
+        "Pack light but prioritize water, food, first-aid, and shelter materials. Distribute weight evenly.",
+        "Maintain tools: oil metal, keep blades dry, sharpen regularly."
+      ]
+    },
+    {
+      "name": "navigation",
+      "keywords": ["gps", "navigate", "north", "map", "compass", "route", "star", "sun"],
+      "responses": [
+        "Use the sun (east morning, west evening) and stars at night; moss often grows on north side of trees in northern hemisphere.",
+        "Draw local maps marking safehouses, water, and danger zones. Carry paper copies.",
+        "Avoid predictable routes; plan multiple exits and avoid chokepoints."
+      ]
+    },
+    {
+      "name": "communication",
+      "keywords": ["radio", "signal", "flare", "whistle", "hand signal", "message", "chalk", "mirror"],
+      "responses": [
+        "Use short radio calls with code names; change channels regularly and keep messages brief.",
+        "Establish silent hand signals for movement, danger, and regrouping to preserve stealth.",
+        "Use colored cloth or mirror flashes for long-distance signals; agree on meanings beforehand."
+      ]
+    },
+    {
+      "name": "emergency",
+      "keywords": ["sos", "emergency", "help", "evacuate", "triage", "rescue", "smoke"],
+      "responses": [
+        "Signal SOS with light (Morse: 3 short, 3 long, 3 short) or three smoke puffs for visibility.",
+        "Set up triage: stop bleeding first, then airway/breathing, then shock/hypothermia.",
+        "If evacuating, take essentials: water, medkit, critical documents, and a compact weapon."
+      ]
+    }
+  ],
+  "default_responses": [
+    "I don’t have a direct tip for that phrasing — try asking about medicine, food, danger, or tools.",
+    "Not sure I understood. Use simple keywords like 'medicine', 'food', 'combat' or 'danger'.",
+    "I couldn't find a match. Try rewording or use an alias (for example: 'bandage' instead of 'heal')."
+  ],
+  "zombie_apocalypse_guide": {
+    "medical": [
+      {
+        "title": "Treating Wounds",
+        "aliases": ["treat wounds", "injury care", "healing cuts", "wound treatment", "bandage"],
+        "tip": "Clean wounds with boiled/purified water or antiseptic. Pat dry, apply antibiotic ointment if available, and cover with a sterile dressing. Change dressings and monitor for infection."
+      },
+      {
+        "title": "Stopping Severe Bleeding",
+        "aliases": ["stop bleeding", "bleeding", "hemorrhage", "blood loss", "tourniquet"],
+        "tip": "Apply firm direct pressure to the wound using a clean cloth. Elevate the limb above the heart. If bleeding doesn't stop, use a tourniquet above the wound as a last resort and note time applied."
+      },
+      {
+        "title": "Identifying Infection",
+        "aliases": ["infection", "infected wound", "pus", "fever", "redness"],
+        "tip": "Look for redness, swelling, increasing pain, pus, foul odor, or fever. Clean and drain if necessary; use antibiotics if available and seek medical attention."
+      },
+      {
+        "title": "Splinting Broken Bones",
+        "aliases": ["splint", "broken bone", "fracture", "immobilize", "splinting"],
+        "tip": "Immobilize the limb using rigid supports (sticks, boards) and soft padding. Secure with cloth or bandages above and below the suspected fracture. Do not attempt to realign bones."
+      },
+      {
+        "title": "Makeshift Pain Relief",
+        "aliases": ["pain relief", "painkiller", "analgesic", "natural painkillers"],
+        "tip": "If pharmaceuticals are unavailable, white willow bark tea (salicin), ginger, or turmeric can reduce pain/inflammation. Use cautiously and be aware of allergies."
+      },
+      {
+        "title": "Field Suturing Basics",
+        "aliases": ["suture", "stitch", "sew wound", "deep cut", "closing wound"],
+        "tip": "Sterilize a needle and thread (fishing line works). Clean wound thoroughly. Use simple interrupted stitches for deep cuts only if bleeding is controlled and infection risk is understood."
+      },
+      {
+        "title": "Burn Care",
+        "aliases": ["burn", "scald", "burn treatment", "first degree", "second degree"],
+        "tip": "Cool burn under clean running water for 10-20 minutes. Cover with sterile non-stick dressing. Do not apply ice or greasy substances. Seek medical help for severe burns."
+      },
+      {
+        "title": "Treating Shock",
+        "aliases": ["shock", "faint", "unconscious", "circulation"],
+        "tip": "Lay person flat, elevate feet unless spinal injury suspected, keep warm and calm. Control bleeding and seek urgent care."
+      },
+      {
+        "title": "Eye Irrigation",
+        "aliases": ["eye wash", "flush eye", "foreign object eye", "eye injury"],
+        "tip": "Rinse eye with clean water or saline for at least 10-15 minutes. If object persists or vision is impaired, seek medical attention."
+      },
+      {
+        "title": "Recognizing Dehydration",
+        "aliases": ["dehydration", "thirst", "dry mouth", "low urine"],
+        "tip": "Signs: dry mouth, dark urine, dizziness. Rehydrate slowly with small sips of filtered or treated water. Add electrolytes if available."
+      },
+      {
+        "title": "Basic Hygiene to Prevent Illness",
+        "aliases": ["hygiene", "cleanliness", "sanitation", "prevent infection"],
+        "tip": "Wash hands with soap and water frequently. Boil water used for washing dishes. Keep living area clean and dispose of waste away from living spaces."
+      },
+      {
+        "title": "Treating Bites (Non-critical)",
+        "aliases": ["bite", "animal bite", "human bite", "wound bite"],
+        "tip": "Clean the area thoroughly, control bleeding, apply antiseptic, and bandage. Monitor closely for infection. Seek medical help for deep or facial bites."
+      },
+      {
+        "title": "Managing Fever",
+        "aliases": ["fever", "high temperature", "temperature", "antipyretic"],
+        "tip": "Lower fever with fluids, cool cloths, and rest. Use fever reducers if available. Monitor for signs of worsening infection."
+      },
+      {
+        "title": "Allergic Reaction Response",
+        "aliases": ["allergy", "anaphylaxis", "hives", "swelling throat"],
+        "tip": "If breathing is compromised or swelling of face/throat occurs, use epinephrine if available and seek immediate help. Lay person down with legs elevated."
+      },
+      {
+        "title": "Basic CPR Reminder",
+        "aliases": ["cpr", "cardiac arrest", "resuscitate", "heart stop"],
+        "tip": "If trained: compressions at 100-120/min, 2 inches deep for adults. Alternate 30 compressions with 2 rescue breaths, or use hands-only CPR if untrained."
+      },
+      {
+        "title": "Sterilizing Instruments",
+        "aliases": ["sterilize", "clean tools", "disinfect instruments", "boil tools"],
+        "tip": "Boil metal tools for at least 5 minutes or immerse in diluted bleach solution (1:10) briefly and rinse with clean water before use."
+      },
+      {
+        "title": "Treating Hypothermia",
+        "aliases": ["hypothermia", "cold", "chill", "shivering"],
+        "tip": "Move to warm shelter, replace wet clothing, use blankets or body heat to warm. Offer warm (not hot) liquids if conscious."
+      },
+      {
+        "title": "Heat Exhaustion and Heatstroke",
+        "aliases": ["heat", "heatstroke", "heat exhaustion", "overheat"],
+        "tip": "Cool down quickly: shade, remove excess clothing, sponge with cool water, hydrate. Heatstroke (confusion, unconsciousness) needs immediate medical care."
+      },
+      {
+        "title": "Storing Medications Safely",
+        "aliases": ["store meds", "medicine storage", "drug storage"],
+        "tip": "Keep meds in sealed containers, away from moisture and heat. Label with use-by dates and keep a basic inventory list."
+      },
+      {
+        "title": "Preventing Infection in Group Settings",
+        "aliases": ["prevent infection", "group hygiene", "quarantine", "isolate sick"],
+        "tip": "Isolate symptomatic individuals, maintain good hygiene, disinfect shared surfaces, and limit shared utensils."
+      },
+      {
+        "title": "Recognizing Serious Internal Injury",
+        "aliases": ["internal bleeding", "internal injury", "abdominal injury", "shock signs"],
+        "tip": "Look for abdominal pain, distension, fainting, pale skin — treat for shock and get to medical care urgently if possible."
+      }
+    ],
+    "combat": [
+      {
+        "title": "Choosing Weapons",
+        "aliases": ["weapon choice", "best weapons", "fighting tools", "weapon selection"],
+        "tip": "Pick durable, easy-to-maintain, and quiet weapons. Crowbars and machetes are versatile; avoid noisy firearms unless necessary."
+      },
+      {
+        "title": "Silent Takedowns",
+        "aliases": ["silent kill", "quiet takedown", "stealth kill", "stealth attack"],
+        "tip": "Approach from behind, control limbs, and target the skull or neck using blades or blunt force while minimizing noise."
+      },
+      {
+        "title": "Aim for the Brain",
+        "aliases": ["headshot", "brain", "kill zombie", "neutralize zombie"],
+        "tip": "Zombies are neutralized by destroying the brain. Aim carefully and conserve ammunition—one precise shot is better than many misses."
+      },
+      {
+        "title": "Defensive Stance",
+        "aliases": ["stance", "combat stance", "defend", "guard position"],
+        "tip": "Keep knees slightly bent, weight balanced, hands ready. Protect your core and maintain situational awareness."
+      },
+      {
+        "title": "Weapon Maintenance",
+        "aliases": ["maintain weapon", "clean weapon", "sharpen blade", "oil gun"],
+        "tip": "Regularly clean, oil, and inspect weapons. Sharpen blades, tighten fittings, and check moving parts to prevent failures."
+      },
+      {
+        "title": "Ambush and Trap Placement",
+        "aliases": ["ambush", "trap", "set trap", "lure"],
+        "tip": "Use terrain and concealment. Place traps on likely paths, create false routes, and ensure quick escape routes for your team."
+      },
+      {
+        "title": "Using Firearms Wisely",
+        "aliases": ["guns", "firearms", "shooting", "gun use"],
+        "tip": "Firearms are loud and attract attention. Use only when necessary, aim carefully, and maintain ammo discipline."
+      },
+      {
+        "title": "Improvised Weapons",
+        "aliases": ["improvise weapon", "makeshift weapon", "craft weapon"],
+        "tip": "Convert pipes, chair legs, or tools into blunt weapons. Ensure they are sturdy and balanced to avoid breaking mid-use."
+      },
+      {
+        "title": "Multi-attacker Awareness",
+        "aliases": ["surrounded", "multiple attackers", "swarm", "group attack"],
+        "tip": "Back toward an exit or narrow choke point, keep attackers in front, use sweeping strikes to keep distance."
+      },
+      {
+        "title": "Keeping Quiet in Combat",
+        "aliases": ["quiet combat", "silent fighting", "stealth combat"],
+        "tip": "Avoid metal-on-metal contact and shouting. Use cloth-wrapped weapons to muffle impact and communicate via hand signals."
+      },
+      {
+        "title": "Disarming Traps and Hazards",
+        "aliases": ["trap removal", "disarm trap", "bomb disposal", "hazard detection"],
+        "tip": "Approach carefully, use poles or probes first, look for tripwire or pressure triggers, and remove or bypass rather than trigger."
+      },
+      {
+        "title": "Group Combat Coordination",
+        "aliases": ["team fight", "group tactics", "coordinated attack"],
+        "tip": "Assign roles (point, rear guard, medic), use signals, and synchronize attacks to overwhelm threats while protecting non-combatants."
+      },
+      {
+        "title": "Sparse Ammo Tactics",
+        "aliases": ["ammo conservation", "save bullets", "low ammo"],
+        "tip": "Use melee for routine encounters; reserve bullets for large groups or armored threats. Aim for high-value targets."
+      },
+      {
+        "title": "Using Environment as Weapon",
+        "aliases": ["environment weapon", "use surroundings", "push hazards"],
+        "tip": "Lead threats into hazards (fires, cliffs) or create barriers to slow them down. Use falling objects or collapsing structures when safe."
+      },
+      {
+        "title": "Hand-to-Hand Defense",
+        "aliases": ["unarmed combat", "melee defense", "close combat"],
+        "tip": "Target vulnerable areas: eyes, throat, groin. Stay balanced, strike quickly, and disengage to avoid grappling with infected."
+      },
+      {
+        "title": "Avoiding Ambushes",
+        "aliases": ["avoid trap", "no ambush", "spot ambush"],
+        "tip": "Move with scouts, use high vantage points to observe, and avoid traveling predictable routes that could be trapped."
+      },
+      {
+        "title": "Night Operations",
+        "aliases": ["night fight", "dark combat", "night mission"],
+        "tip": "Use minimal light, know your terrain beforehand, and use thermal or night optics if available. Move silently."
+      },
+      {
+        "title": "Recovering Weapons Safely",
+        "aliases": ["recover weapon", "safe pickup", "weapon retrieval"],
+        "tip": "Ensure area is secure before retrieving dropped weapons. Check for bio-contamination and clean before reuse."
+      },
+      {
+        "title": "Dealing with Armored Threats",
+        "aliases": ["armored zombie", "protective gear", "body armor"],
+        "tip": "Focus on exposed areas (neck, joints). Use heavy blunt force or fire to penetrate armor if ammunition and safety permit."
+      },
+      {
+        "title": "Retreat and Reposition",
+        "aliases": ["retreat", "fall back", "disengage", "reposition"],
+        "tip": "If overwhelmed, withdraw to predetermined fallback points, maintain suppressive actions while retreating, and regroup quickly."
+      }
+    ],
+    "hiding": [
+      {
+        "title": "Best Hiding Spots",
+        "aliases": ["attic", "cellar", "bushes", "concealed spot", "safe hiding"],
+        "tip": "Choose locations with few approaches and at least two exits. Prefer cool, dark, and dry spaces with concealment."
+      },
+      {
+        "title": "Avoiding Detection",
+        "aliases": ["stealth", "silent", "stay unseen", "avoid detection"],
+        "tip": "Move slowly, minimize gear noise, avoid lights, and cover reflective surfaces. Plan route and rehearse movement."
+      },
+      {
+        "title": "Masking Scent",
+        "aliases": ["mask smell", "scent cover", "remove smell"],
+        "tip": "Mask human scent with strong consistent local odors (mud, ash). Avoid fragrances and new smells that could attract attention."
+      },
+      {
+        "title": "Nighttime Movement",
+        "aliases": ["move at night", "travel night", "night travel"],
+        "tip": "Use moonlight and natural shadows. Move only when you know the route. Watch for humans — they may be more active at night."
+      },
+      {
+        "title": "Creating Camouflage",
+        "aliases": ["camouflage", "blend in"],
+        "tip": "Break up silhouette with natural materials, use muted colors, and avoid reflective surfaces. Match local environment textures."
+      },
+      {
+        "title": "Silent Entry Techniques",
+        "aliases": ["quiet entry", "sneak in", "silent approach"],
+        "tip": "Use gloves, avoid metal tools that squeak, and pre-check doors/windows for hazards. Slow is silent."
+      },
+      {
+        "title": "Fortifying a Cache",
+        "aliases": ["cache fortify", "store supplies", "secure cache"],
+        "tip": "Conceal supplies in false bottoms or high places. Mark with subtle code only your group understands."
+      },
+      {
+        "title": "Shelter Selection",
+        "aliases": ["choose shelter", "shelter pick", "safe shelter"],
+        "tip": "Prefer structures that are defensible, have water access, and are not obvious to others (avoid big shopping centers)."
+      },
+      {
+        "title": "Maintaining Low Profile",
+        "aliases": ["low profile", "stay quiet", "reduce presence"],
+        "tip": "Minimize visible signs of habitation: no fires in plain sight, limit comings and goings, and keep noise to a minimum."
+      },
+      {
+        "title": "Emergency Concealment",
+        "aliases": [ "quick conceal", "no escape"],
+        "tip": "If surprised, find nearest dark recess, stay still, control breathing, and cover mouth to muffle sound."
+      },
+      {
+        "title": "Noise Discipline",
+        "aliases": ["noise control", "quiet rules", "sound discipline"],
+        "tip": "Establish rules for noise: no loud tools, no radios at full volume, and communicate with hand signals."
+      },
+      {
+        "title": "Using Dummy Decoys",
+        "aliases": ["decoy", "dummy", "false trail", "bait"],
+        "tip": "Create fake tracks or noise sources away from your base to divert attention. Use sparingly to avoid pattern recognition."
+      }
+    ],
+    "food": [
+      {
+        "title": "Safe Foraging",
+        "aliases": ["forage", "edible plants", "wild food", "identify plants"],
+        "tip": "Learn and rely on a short trusted list of edible plants in your region. When unsure, boil and test small amounts over days for reactions."
+      },
+      {
+        "title": "Water Purification",
+        "aliases": ["purify water", "clean water", "boil water", "filter water"],
+        "tip": "Boil water at a rolling boil 1-3 minutes depending on altitude. Use layered charcoal/sand filters."
+      },
+      {
+        "title": "Urban Scavenging",
+        "aliases": ["scavenge", "search city", "loots", "urban forage"],
+        "tip": "Check grocery break rooms, restaurant storage, basements, and delivery bays. Move quickly, note exits, and avoid confrontations."
+      },
+      {
+        "title": "Fishing Without Gear",
+        "aliases": ["fish no gear", "improvise fishing", "catch fish"],
+        "tip": "Use baited bottle traps, weirs, or sharpened sticks. Target shallow calm areas and watch for currents."
+      },
+      {
+        "title": "Preserving Meat",
+        "aliases": ["preserve meat", "smoke meat", "salt meat", "store meat"],
+        "tip": "Salt or smoke meat to preserve. Dry low and slow. Keep in clean containers away from insects."
+      },
+      {
+        "title": "Rationing Strategy",
+        "aliases": ["ration", "food plan", "portion control", "rationing"],
+        "tip": "Calculate daily calorie needs and portion supplies to stretch. Prioritize high-calorie, nutrient-dense foods."
+      },
+      {
+        "title": "Safe Dairy Use",
+        "aliases": ["dairy safe", "milk", "cheese", "preserve dairy"],
+        "tip": "Use pasteurized dairy when possible. Cheese and clarified butter preserve better than milk."
+      },
+      {
+        "title": "Cooking Without Gas",
+        "aliases": ["cook no gas", "camp stove", "open fire cooking"],
+        "tip": "Use simple twig/wood stoves, solar ovens, or improvised rocket stoves. Cook thoroughly to avoid pathogens."
+      },
+      {
+        "title": "Gathering Edible Insects",
+        "aliases": ["insects", "bugs eat", "protein bugs"],
+        "tip": "Crickets, mealworms, and certain larvae are high-protein; roast or boil thoroughly and avoid brightly colored species."
+      },
+      {
+        "title": "Storing Food Safely",
+        "aliases": ["store food", "food cache", "food safety", "preserve"],
+        "tip": "Store in airtight containers, keep away from moisture, use elevated caches to deter pests, and label with dates."
+      },
+      {
+        "title": "Making Emergency Meals",
+        "aliases": ["emergency meal", "one pot", "survival meal", "quick cook"],
+        "tip": "Combine rice or pasta with protein (canned/jerky) and freeze-dried veggies. Fortify with oils for calories."
+      },
+      {
+        "title": "Finding Water Sources",
+        "aliases": ["find water", "water sources", "well locate", "get water"],
+        "tip": "Look for green vegetation, animal tracks to water, and low-lying areas. Collect rainwater and dew where possible."
+      },
+      {
+        "title": "Using Solar Still",
+        "aliases": ["solar still", "distill water", "make still", "purify"],
+        "tip": "Dig a hole, put a container in center, cover with plastic, weight center with stone to collect evaporated water into container."
+      },
+      {
+        "title": "Bartering Food",
+        "aliases": ["barter", "trade food", "swap supplies"],
+        "tip": "Trade based on supply demand: medical supplies and fuel are high value, trade for long-lasting food items."
+      }
+    ],
+    "adaptability": [
+      {
+        "title": "Mental Resilience",
+        "aliases": ["stay sane", "mental health", "resilience", "mindset"],
+        "tip": "Create routines, set small daily goals, exercise, and foster social bonds to maintain morale and mental health."
+      },
+      {
+        "title": "Group Dynamics",
+        "aliases": ["teamwork", "group survive", "roles", "leadership"],
+        "tip": "Assign clear roles, set rules, rotate duties, and resolve conflicts quickly. Trust but verify newcomers."
+      },
+      {
+        "title": "Solo vs Group Choice",
+        "aliases": ["solo vs group", "go alone", "group benefits", "travel group"],
+        "tip": "Solo is stealthier and flexible; groups provide security and shared skills. Choose based on mission and resources."
+      },
+      {
+        "title": "Improvisation Skills",
+        "aliases": ["improvise", "make tools", "DIY", "craft"],
+        "tip": "Repurpose items: belts as straps, curtains as ropes, cans as cook pots. Think multi-use when scavenging."
+      },
+      {
+        "title": "Maintaining Physical Fitness",
+        "aliases": ["fitness", "exercise", "stamina", "endurance"],
+        "tip": "Daily calisthenics, load-bearing walks, and functional training keep you ready for evacuations and combat."
+      },
+      {
+        "title": "Learning New Skills Quickly",
+        "aliases": ["learn fast", "teach skills", "train quick", "skill swap"],
+        "tip": "Use short focused practice sessions and peer teaching; prioritize life-saving skills (first aid, navigation, fire-starting)."
+      },
+      {
+        "title": "Energy Conservation",
+        "aliases": ["save energy", "conserve", "rest", "stamina save"],
+        "tip": "Limit heavy activity to cooler parts of day, rest frequently, and prioritize tasks to conserve calories and energy."
+      },
+      {
+        "title": "Adapting to Climate",
+        "aliases": ["climate adapt", "hot weather", "cold weather", "weather prep"],
+        "tip": "In cold: layer clothing, insulate shelter, avoid sweating. In heat: stay hydrated, shade, and rest mid-day."
+      },
+      {
+        "title": "Resource Rotation",
+        "aliases": ["rotate supplies", "use by", "first expire", "supply rotation"],
+        "tip": "Use FIFO (first in, first out) for perishable items and regularly inventory to prevent waste."
+      },
+      {
+        "title": "Teaching Others",
+        "aliases": ["train others", "teach skills", "pass knowledge"],
+        "tip": "Teach essential tasks in short drills with feedback. Create cheat-sheets and visual aids for quick learning."
+      },
+      {
+        "title": "Adapting Communication",
+        "aliases": ["change comms", "signal change", "silent signals adapt"],
+        "tip": "Switch to non-verbal and coded messages when radio or phones are too risky. Rotate codes periodically."
+      },
+      {
+        "title": "Psychological First Aid",
+        "aliases": ["pfa", "comfort", "mental first aid", "support"],
+        "tip": "Listen, validate feelings, provide practical help, and connect to group supports. Encourage routine and small achievements."
+      },
+      {
+        "title": "Managing Scarcity",
+        "aliases": ["scarcity", "shortage", "rationing", "supply management"],
+        "tip": "Prioritize critical needs, identify renewable resources, and establish fair sharing rules to maintain social cohesion."
+      },
+      {
+        "title": "Redundancy Planning",
+        "aliases": ["backup plan", "redundancy", "fallback", "plan b"],
+        "tip": "Create backups for routes, caches, and roles. Assume a primary option will fail and prepare alternatives."
+      },
+      {
+        "title": "Rapid Decision Making",
+        "aliases": ["decide fast", "quick decision", "triage decision"],
+        "tip": "Use simple heuristics: safety > speed > comfort. Delegate smaller decisions to reduce bottlenecking."
+      }
+    ],
+    "tools_and_gear": [
+      {
+        "title": "Must-Have Tools",
+        "aliases": ["gear", "essentials", "kit", "survival kit", "bug out bag"],
+        "tip": "Multitool, fixed-blade knife, water filter, firestarter, flashlight, spare batteries, duct tape, paracord, and basic medkit."
+      },
+      {
+        "title": "Backpack Packing Order",
+        "aliases": ["pack order", "pack tips", "bugout pack", "packing"],
+        "tip": "Keep frequently used items accessible (water, radio, medkit). Place heavy items close to back and balance weight."
+      },
+      {
+        "title": "Fire Starting Options",
+        "aliases": ["start fire", "firestarter", "ignite", "matches", "lighter"],
+        "tip": "Carry multiple methods: ferro rod, waterproof matches, lighter, and tinder. Practice using them in windy/wet conditions."
+      },
+      {
+        "title": "Water Filtration Tools",
+        "aliases": ["water filter", "filter", "purifier", "straw filter"],
+        "tip": "Use ceramic/carbon filters and treat with tablets/boil afterwards to remove pathogens and pollutants."
+      },
+      {
+        "title": "Light Without Power",
+        "aliases": ["lighting", "lantern", "no power light", "DIY light"],
+        "tip": "Use headlamps, LED lanterns, candles in jars, or DIY bottle-lanterns. Keep light low to avoid detection."
+      },
+      {
+        "title": "Repair Kits",
+        "aliases": ["repair", "fix kit", "sewing kit", "mend tools"],
+        "tip": "Carry needle, thread, spare buckles, zip ties, tape, spare screws, and basic tools to repair gear quickly."
+      },
+      {
+        "title": "Weapon Care Kit",
+        "aliases": ["gun kit", "weapon care", "maintenance kit"],
+        "tip": "Include oil, cleaning rods, patches, small file, and spare parts. Clean after each use and store dry."
+      },
+      {
+        "title": "Clothing Choices",
+        "aliases": ["clothes", "gear clothes", "clothing", "dress"],
+        "tip": "Layer clothing for temperature control. Use neutral colors for concealment. Waterproof outer layers are essential."
+      },
+      {
+        "title": "Portable Shelter Options",
+        "aliases": ["shelter", "tent", "tarp", "bivy"],
+        "tip": "Tarps and bivvy sacks are lightweight and versatile. Rig tarps low to block wind and high for ventilation depending on climate."
+      },
+      {
+        "title": "Navigation Gear",
+        "aliases": ["compass", "map", "gps backup", "navigation tools"],
+        "tip": "Carry a map and compass; learn to use them without electronics. Mark caches and safe routes on paper maps."
+      },
+      {
+        "title": "Storage and Caching",
+        "aliases": ["cache", "stash", "store supplies"],
+        "tip": "Use waterproof containers, bury or elevate caches, and mark subtly. Rotate caches and keep locations known only to trusted members."
+      },
+      {
+        "title": "Signaling Tools",
+        "aliases": ["flare", "mirror", "whistle", "signal tools"],
+        "tip": "Keep a small set of signaling devices—whistle, signal mirror, flares—for emergencies; train everyone on codes."
+      },
+      {
+        "title": "Energy Sources",
+        "aliases": ["battery", "solar", "generator", "power"],
+        "tip": "Prioritize solar chargers and efficient batteries. Keep devices in airplane mode to save power when not needed."
+      },
+      {
+        "title": "Hygiene Kit",
+        "aliases": ["hygiene", "soap", "tooth kit", "sanitation kit"],
+        "tip": "Include soap, toothbrush, menstrual supplies, small towel, hand sanitizer, and basic disinfectants to reduce disease spread."
+      },
+      {
+        "title": "Tool Multipurpose Use",
+        "aliases": ["multiuse", "repurpose tools", "multi tool use"],
+        "tip": "Choose gear for multiple functions (knife that carves and digs, tarp that shelters and signals) to save weight and increase utility."
+      }
+    ],
+    "navigation": [
+      {
+        "title": "Navigating Without GPS",
+        "aliases": ["no gps", "natural navigation", "use sun", "find north"],
+        "tip": "Use sun position, stars, and landmarks. Moss often grows on north side of trees in northern hemisphere; confirm with multiple observations."
+      },
+      {
+        "title": "Drawing Local Maps",
+        "aliases": ["map making", "draw map", "sketch map", "local map"],
+        "tip": "Record landmarks, danger zones, water sources, and caches. Keep maps updated and distribute copies to trusted allies."
+      },
+      {
+        "title": "Using a Compass",
+        "aliases": ["compass use", "bearing", "heading", "azimuth"],
+        "tip": "Hold compass level, rotate to orient, and follow bearings. Take multiple bearings to triangulate position."
+      },
+      {
+        "title": "Reading the Sky",
+        "aliases": ["weather signs", "cloud reading", "predict weather"],
+        "tip": "Red sky at night often indicates stable weather next day; quick cloud build-up can mean storms. Use sky observations plus local cues."
+      },
+      {
+        "title": "Avoiding Chokepoints",
+        "aliases": ["avoid tunnels", "avoid bridges", "no chokepoint", "route planning"],
+        "tip": "Avoid confined routes like tunnels and narrow bridges unless scouted; these limit escape options and make ambushes easy."
+      },
+      {
+        "title": "Creating Trail Markers",
+        "aliases": ["marker", "trail sign", "breadcrumbs", "leave signs"],
+        "tip": "Use subtle markers (stacked stones, small scratches) that your group recognizes. Avoid obvious marks visible to aerial observers."
+      },
+      {
+        "title": "Estimating Distance",
+        "aliases": ["distance estimate", "how far", "pace count"],
+        "tip": "Use pace counting (steps per 100m) and map scale to estimate distance. Time travel based on terrain and load."
+      },
+      {
+        "title": "Night Navigation",
+        "aliases": ["navigate night", "night map", "move night"],
+        "tip": "Use low light, follow natural contours, and avoid unknown areas. Use moon and stars if visible. Move slowly and listen."
+      },
+      {
+        "title": "Using Landmarks Safely",
+        "aliases": ["use landmarks", "landmark", "safe landmark"],
+        "tip": "Choose landmarks that are not likely to be destroyed or changed; note secondary landmarks in case primary is altered."
+      },
+      {
+        "title": "Finding Roads and Paths",
+        "aliases": ["find road", "follow trail", "path find"],
+        "tip": "Follow minor roads and paths cautiously—these can lead to settlements or danger. Observe from cover before entering."
+      }
+    ],
+    "communication": [
+      {
+        "title": "Using Silent Signals",
+        "aliases": ["hand signals", "silent comms", "quiet signals"],
+        "tip": "Agree on simple hand signals for move, stop, danger, regroup, and help. Practice until instinctive."
+      },
+      {
+        "title": "Radio Protocol",
+        "aliases": ["radio", "walkie", "comm protocol", "use radio"],
+        "tip": "Use short transmissions, code names, and rotate channels. Assume radios are monitored—avoid revealing locations."
+      },
+      {
+        "title": "Whistle Codes",
+        "aliases": ["whistle", "sound code", "signal whistle"],
+        "tip": "Two short = regroup, one long = danger, three short = help. Keep whistles on your person and teach to all members."
+      },
+      {
+        "title": "Chalk and Marking Codes",
+        "aliases": ["chalk marks", "trail codes", "leave marks"],
+        "tip": "Use symbols for 'safe', 'danger', and directional arrows. Keep codes simple and known only to group to avoid giving info to others."
+      },
+      {
+        "title": "Using Mirrors and Light",
+        "aliases": ["mirror signal", "flash light", "use mirror"],
+        "tip": "Reflect sunlight in short bursts for long-distance signaling. Use with care, as reflections can reveal position."
+      }
+    ],
+    "emergency_signals": [
+      {
+        "title": "SOS with Light",
+        "aliases": ["sos light", "morse sos", "flash sos"],
+        "tip": "Use three short, three long, three short flashes for SOS. Repeat periodically and from covered positions if possible."
+      },
+      {
+        "title": "Smoke Signals",
+        "aliases": ["smoke", "signal fire", "smoke column"],
+        "tip": "Create three distinct puffs or columns for attention; use wet leaves for thick smoke and darker colors for visibility."
+      },
+      {
+        "title": "Ground Symbols",
+        "aliases": ["ground sign", "sand drawing", "flag ground"],
+        "tip": "Draw large symbols or arrows in open ground for overhead observers; keep meanings standardized among allies."
+      },
+      {
+        "title": "Hanging Cloth or Flag",
+        "aliases": ["flag signal", "cloth signal", "hang rag"],
+        "tip": "Hang colored cloth in visible places as pre-agreed signals (e.g., red = danger, green = safe). Keep colors consistent across group."
+      },
+      {
+        "title": "Whistle and Horn Use",
+        "aliases": ["horn", "whistle emergency", "sound alarm"],
+        "tip": "Use short, loud sounds to attract help or distract threats, but use sparingly to avoid drawing unwanted attention."
+      }
+    ],
+    "psychological_survival": [
+      {
+        "title": "Managing Fear",
+        "aliases": ["fear", "panic", "stay calm", "control panic"],
+        "tip": "Use breathing exercises, focus on present tasks, and rely on routines. Small, achievable tasks reduce anxiety."
+      },
+      {
+        "title": "Avoiding Cabin Fever",
+        "aliases": ["boredom", "isolation", "cabin fever", "mental fatigue"],
+        "tip": "Rotate activities, schedule social time, exercise, and create learning tasks to keep minds engaged."
+      },
+      {
+        "title": "Coping with Loss",
+        "aliases": ["grief", "loss", "mourn", "death in group"],
+        "tip": "Allow time for mourning, provide support, and maintain practical survival needs. Rituals can help closure."
+      },
+      {
+        "title": "Maintaining Morale",
+        "aliases": ["morale", "motivate", "keep spirits", "encourage"],
+        "tip": "Celebrate small wins, keep a shared purpose, and rotate leadership to prevent burnout."
+      },
+      {
+        "title": "Dealing with Betrayal",
+        "aliases": ["betray", "traitor", "trust issue", "backstab"],
+        "tip": "Verify information before drastic action, keep contingency plans, and maintain security protocols for access."
+      }
+    ],
+    "children_and_family": [
+      {
+        "title": "Explaining Danger to Kids",
+        "aliases": ["talk kids", "explain zombies", "child explain"],
+        "tip": "Use simple rules (stay quiet, stay close), turn training into games, and avoid frightening details while emphasizing safety."
+      },
+      {
+        "title": "Keeping Children Safe",
+        "aliases": ["child safety", "protect kids", "kids safe"],
+        "tip": "Always pair children with an adult, give them visible identifiers, and teach them whistle or signal use."
+      },
+      {
+        "title": "Family Travel Protocols",
+        "aliases": ["family travel", "move family", "family route"],
+        "tip": "Assign roles: lead, rear guard, child-tender. Move during low risk windows and keep children in center of formation."
+      },
+      {
+        "title": "Child-Friendly Food",
+        "aliases": ["kid meals", "soft food", "baby food"],
+        "tip": "Offer soft, calorie-dense foods like mashed beans, rice, and dried fruit. Ensure hydration and avoid choking hazards."
+      },
+      {
+        "title": "Teaching Teens Survival Skills",
+        "aliases": ["train teens", "teach youth", "teen survival"],
+        "tip": "Teach practical tasks: navigation, first aid, basic tool use, and simple defense. Teens can be valuable team members."
+      }
+    ]
+  }
+}

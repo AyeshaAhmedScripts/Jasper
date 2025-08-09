@@ -13,8 +13,13 @@
   <div class="stat-box">❓ Missing: <strong>{{ status_counts.get('Missing', 0) }}</strong></div>
 </div>
 
-<canvas id="statusChart" width="400" height="200"></canvas>
-<canvas id="health_statusChart" width="400" height="200" style="margin-top: 40px;"></canvas>
+<div class="chart-container">
+  <canvas id="statusChart" width="300" height="150"></canvas>
+  <canvas id="health_statusChart" width="300" height="150"></canvas>
+</div>
+
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
@@ -75,15 +80,18 @@
   }
 
   .stat-box {
-    background-color: #2a2a3f;
-    border: 1px solid #444;
-    padding: 15px 20px;
-    border-radius: 6px;
-    font-size: 16px;
-    flex: 1 1 200px;
-    max-width: 300px;
-    text-align: center;
-  }
+  background-color: #2a2a3f !important;
+  border: 1px solid #444 !important;
+  padding: 8px 12px !important;
+  border-radius: 6px !important;
+  font-size: 13px !important;
+  flex: 0 0 150px !important;
+  max-width: 150px !important;
+  text-align: center !important;
+  line-height: 1.2 !important;
+}
+
+
 
   @media (max-width: 768px) {
     .stat-box {
@@ -95,5 +103,20 @@
       max-width: 100%;
     }
   }
+
+  .chart-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+  overflow-x: auto;
+}
+
+.chart-container canvas {
+  flex: 1 1 300px;
+  max-width: 100%;
+}
+
 </style>
 {% endblock %}
