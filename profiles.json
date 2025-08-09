@@ -1,0 +1,1938 @@
+[
+  {
+    "id": "0af35c6e-b3e1-42c2-8e0b-0a6e0de78463",
+    "name": "Rosa Stone",
+    "role": "Survivalist",
+    "skills": [
+      "Scouting",
+      "Cooking",
+      "Wilderness Survival"
+    ],
+    "location": "Safehouse",
+    "status": "Missing",
+    "health_status": "High",
+    "age": 51,
+    "contact": "+92-3246598845",
+    "emergency": "Channel-6",
+    "description": "Rosa Stone is a skilled survivalist known for wilderness survival and scouting."
+  },
+  {
+    "id": "cc4e67ed-0d3b-4954-ab3e-3e995f8c16f4",
+    "name": "Liam Sato",
+    "role": "Leader",
+    "skills": [
+      "Scouting",
+      "Survival",
+      "First Aid",
+      "Engineering"
+    ],
+    "location": "Tower Ruins",
+    "status": "Zombie",
+    "health_status": "Low",
+    "age": 56,
+    "contact": "+92-3817369346",
+    "emergency": "Channel-2",
+    "description": "Liam Sato is a skilled leader known for first aid and scouting."
+  },
+  {
+    "id": "bc52f9f1-b481-456f-8ef6-18d5ce489274",
+    "name": "Grace Frost",
+    "role": "Cook",
+    "skills": [
+      "Wilderness Survival",
+      "Tracking",
+      "Scouting",
+      "Hacking"
+    ],
+    "location": "Safehouse",
+    "status": "Alive",
+    "health_status": "Low",
+    "age": 19,
+    "contact": "+92-3150581478",
+    "emergency": "Channel-1",
+    "description": "Grace Frost is a skilled cook known for hacking and tracking."
+  },
+  {
+    "id": "1cfb3072-1517-4426-9b1b-136879279039",
+    "name": "Victor Choi",
+    "role": "Leader",
+    "skills": [
+      "Sharpshooting",
+      "Medical Training"
+    ],
+    "location": "Safehouse",
+    "status": "Missing",
+    "health_status": "Medium",
+    "age": 67,
+    "contact": "+92-3739293152",
+    "emergency": "Channel-4",
+    "description": "Victor Choi is a skilled leader known for sharpshooting and medical training."
+  },
+  {
+    "id": "bbe7d3ba-6102-4066-b099-9cd72050f757",
+    "name": "Nina Frost",
+    "role": "Engineer",
+    "skills": [
+      "Hacking",
+      "Medical Training",
+      "Negotiation"
+    ],
+    "location": "Zone A",
+    "status": "Missing",
+    "health_status": "Medium",
+    "age": 37,
+    "contact": "+92-3950441221",
+    "emergency": "Channel-3",
+    "description": "Nina Frost is a skilled engineer known for medical training and medical training."
+  },
+  {
+    "id": "969182a0-e3f2-4f20-99d5-673b67d6a2cf",
+    "name": "Eli Frost",
+    "role": "Cook",
+    "skills": [
+      "Wilderness Survival",
+      "Cooking"
+    ],
+    "location": "Sector 5",
+    "status": "Missing",
+    "health_status": "Medium",
+    "age": 28,
+    "contact": "+92-3335040081",
+    "emergency": "Channel-8",
+    "description": "Eli Frost is a skilled cook known for wilderness survival and wilderness survival."
+  },
+  {
+    "id": "f93a90ed-f32b-4930-ba1b-5fae133db26b",
+    "name": "Ivy Wells",
+    "role": "Builder",
+    "skills": [
+      "Negotiation",
+      "Explosives",
+      "Engineering"
+    ],
+    "location": "Tower Ruins",
+    "status": "Zombie",
+    "health_status": "Medium",
+    "age": 31,
+    "contact": "+92-3116654391",
+    "emergency": "Channel-10",
+    "description": "Ivy Wells is a skilled builder known for engineering and negotiation."
+  },
+  {
+    "id": "55f878c1-91f9-4688-977a-b5e975295824",
+    "name": "Harper Watson",
+    "role": "Cook",
+    "skills": [
+      "Hacking",
+      "Wilderness Survival",
+      "Explosives",
+      "First Aid"
+    ],
+    "location": "Safehouse",
+    "status": "Zombie",
+    "health_status": "Medium",
+    "age": 67,
+    "contact": "+92-3241710589",
+    "emergency": "Channel-6",
+    "description": "Harper Watson is a skilled cook known for hacking and first aid."
+  },
+  {
+    "id": "b6244c60-47d2-4958-820f-f04831b16bb4",
+    "name": "Noah Drake",
+    "role": "Fighter",
+    "skills": [
+      "Scouting",
+      "Sharpshooting"
+    ],
+    "location": "Sector 5",
+    "status": "Zombie",
+    "health_status": "Medium",
+    "age": 41,
+    "contact": "+92-3629183275",
+    "emergency": "Channel-2",
+    "description": "Noah Drake is a skilled fighter known for scouting and sharpshooting."
+  },
+  {
+    "id": "847182a8-23d6-46cc-8e66-d2811110ddea",
+    "name": "Zane Frost",
+    "role": "Fighter",
+    "skills": [
+      "Stealth",
+      "Repair"
+    ],
+    "location": "Safehouse",
+    "status": "Injured",
+    "health_status": "Critical",
+    "age": 21,
+    "contact": "+92-3767937181",
+    "emergency": "Channel-4",
+    "description": "Zane Frost is a skilled fighter known for repair and stealth."
+  },
+  {
+    "id": "03be0560-69e9-40c3-88f4-b7c22d3bb097",
+    "name": "Rosa Kim",
+    "role": "Mechanic",
+    "skills": [
+      "Hacking",
+      "Medical Training",
+      "Engineering",
+      "Botany"
+    ],
+    "location": "Safehouse",
+    "status": "Zombie",
+    "health_status": "Low",
+    "age": 23,
+    "contact": "+92-3455081737",
+    "emergency": "Channel-5",
+    "description": "Rosa Kim is a skilled mechanic known for engineering and botany."
+  },
+  {
+    "id": "bb37df10-33a5-444e-92ef-5868d245a17b",
+    "name": "Marcus Khan",
+    "role": "Cook",
+    "skills": [
+      "Sharpshooting",
+      "Cooking",
+      "Engineering"
+    ],
+    "location": "Sector 5",
+    "status": "Zombie",
+    "health_status": "High",
+    "age": 35,
+    "contact": "+92-3925520319",
+    "emergency": "Channel-3",
+    "description": "Marcus Khan is a skilled cook known for engineering and cooking."
+  },
+  {
+    "id": "5c4afa86-0c7b-4f21-82a7-dd03b38ac9bb",
+    "name": "Noah Frost",
+    "role": "Mechanic",
+    "skills": [
+      "Survival",
+      "Wilderness Survival",
+      "Cooking",
+      "Bartering"
+    ],
+    "location": "Safehouse",
+    "status": "Missing",
+    "health_status": "Critical",
+    "age": 69,
+    "contact": "+92-3178326830",
+    "emergency": "Channel-1",
+    "description": "Noah Frost is a skilled mechanic known for wilderness survival and bartering."
+  },
+  {
+    "id": "2175287d-d74d-4202-809f-c7987ae30824",
+    "name": "Harper Walker",
+    "role": "Fighter",
+    "skills": [
+      "Bartering",
+      "Negotiation",
+      "Repair"
+    ],
+    "location": "Tower Ruins",
+    "status": "Injured",
+    "health_status": "Critical",
+    "age": 70,
+    "contact": "+92-3643579622",
+    "emergency": "Channel-4",
+    "description": "Harper Walker is a skilled fighter known for negotiation and negotiation."
+  },
+  {
+    "id": "a225dfc1-4cf2-4232-b6b5-c67387296e44",
+    "name": "Lara Stone",
+    "role": "Sniper",
+    "skills": [
+      "Bartering",
+      "Tracking"
+    ],
+    "location": "Zone A",
+    "status": "Injured",
+    "health_status": "High",
+    "age": 42,
+    "contact": "+92-3460004401",
+    "emergency": "Channel-1",
+    "description": "Lara Stone is a skilled sniper known for tracking and tracking."
+  },
+  {
+    "id": "c5506b7a-1a66-4848-b25f-d130d97ad3f7",
+    "name": "Victor Kim",
+    "role": "Engineer",
+    "skills": [
+      "Survival",
+      "Repair"
+    ],
+    "location": "Safehouse",
+    "status": "Alive",
+    "health_status": "Medium",
+    "age": 54,
+    "contact": "+92-3536177814",
+    "emergency": "Channel-3",
+    "description": "Victor Kim is a skilled engineer known for repair and repair."
+  },
+  {
+    "id": "810ad570-2861-4ac8-a681-4c151a5d6ec1",
+    "name": "Harper Lopez",
+    "role": "Leader",
+    "skills": [
+      "Survival",
+      "Cooking",
+      "First Aid",
+      "Sharpshooting"
+    ],
+    "location": "Safehouse",
+    "status": "Injured",
+    "health_status": "Medium",
+    "age": 17,
+    "contact": "+92-3472811650",
+    "emergency": "Channel-1",
+    "description": "Harper Lopez is a skilled leader known for cooking and first aid."
+  },
+  {
+    "id": "2d8fd172-3127-4500-a60d-709ceac563ce",
+    "name": "Aiden Grant",
+    "role": "Farmer",
+    "skills": [
+      "Survival",
+      "Repair",
+      "Engineering"
+    ],
+    "location": "Safehouse",
+    "status": "Alive",
+    "health_status": "Medium",
+    "age": 68,
+    "contact": "+92-3184116700",
+    "emergency": "Channel-4",
+    "description": "Aiden Grant is a skilled farmer known for engineering and engineering."
+  },
+  {
+    "id": "ba4f7d24-df83-4ce3-bbe5-f42e5650d5a6",
+    "name": "Noah Ali",
+    "role": "Survivalist",
+    "skills": [
+      "Negotiation",
+      "Survival"
+    ],
+    "location": "Zone B",
+    "status": "Alive",
+    "health_status": "Low",
+    "age": 62,
+    "contact": "+92-3240637390",
+    "emergency": "Channel-10",
+    "description": "Noah Ali is a skilled survivalist known for survival and negotiation."
+  },
+  {
+    "id": "e47da83a-63db-4a03-ade8-fcc4661de41a",
+    "name": "Eli Kim",
+    "role": "Scientist",
+    "skills": [
+      "Medical Training",
+      "Repair"
+    ],
+    "location": "Camp Echo",
+    "status": "Missing",
+    "health_status": "High",
+    "age": 46,
+    "contact": "+92-3140692151",
+    "emergency": "Channel-5",
+    "description": "Eli Kim is a skilled scientist known for medical training and repair."
+  },
+  {
+    "id": "44e889f7-c43e-4235-830b-5e762103e9a9",
+    "name": "Eli Wells",
+    "role": "Farmer",
+    "skills": [
+      "Scouting",
+      "Tracking",
+      "Repair",
+      "Hacking"
+    ],
+    "location": "Zone B",
+    "status": "Zombie",
+    "health_status": "Critical",
+    "age": 29,
+    "contact": "+92-3786405625",
+    "emergency": "Channel-9",
+    "description": "Eli Wells is a skilled farmer known for tracking and tracking."
+  },
+  {
+    "id": "47e8c57d-ee6f-4317-83b6-c34d1dc032c8",
+    "name": "Noah Nguyen",
+    "role": "Scientist",
+    "skills": [
+      "Stealth",
+      "Cooking",
+      "Repair",
+      "First Aid"
+    ],
+    "location": "Zone A",
+    "status": "Zombie",
+    "health_status": "Critical",
+    "age": 22,
+    "contact": "+92-3227615620",
+    "emergency": "Channel-10",
+    "description": "Noah Nguyen is a skilled scientist known for stealth and repair."
+  },
+  {
+    "id": "75813f9b-4e7f-4610-a784-8ddf1631b004",
+    "name": "Rosa Walker",
+    "role": "Fighter",
+    "skills": [
+      "Engineering",
+      "Tracking"
+    ],
+    "location": "Zone B",
+    "status": "Zombie",
+    "health_status": "Medium",
+    "age": 62,
+    "contact": "+92-3112647910",
+    "emergency": "Channel-9",
+    "description": "Rosa Walker is a skilled fighter known for engineering and tracking."
+  },
+  {
+    "id": "8a5dfe0b-3b7d-49ce-84ba-7645c04eca64",
+    "name": "Marcus Choi",
+    "role": "Hacker",
+    "skills": [
+      "Cooking",
+      "Botany"
+    ],
+    "location": "Camp Echo",
+    "status": "Alive",
+    "health_status": "Low",
+    "age": 37,
+    "contact": "+92-3499213769",
+    "emergency": "Channel-9",
+    "description": "Marcus Choi is a skilled hacker known for botany and botany."
+  },
+  {
+    "id": "444c0996-3389-4aa8-9ce7-18299e42be61",
+    "name": "Riley Stone",
+    "role": "Fighter",
+    "skills": [
+      "Repair",
+      "First Aid",
+      "Engineering"
+    ],
+    "location": "Camp Echo",
+    "status": "Alive",
+    "health_status": "Critical",
+    "age": 64,
+    "contact": "+92-3451810304",
+    "emergency": "Channel-3",
+    "description": "Riley Stone is a skilled fighter known for repair and engineering."
+  },
+  {
+    "id": "c73086d5-b0d0-4630-9766-461b41a3fbbe",
+    "name": "Rosa Watson",
+    "role": "Cook",
+    "skills": [
+      "Cooking",
+      "Repair",
+      "Explosives",
+      "Engineering"
+    ],
+    "location": "Zone A",
+    "status": "Injured",
+    "health_status": "Medium",
+    "age": 36,
+    "contact": "+92-3264384635",
+    "emergency": "Channel-9",
+    "description": "Rosa Watson is a skilled cook known for repair and engineering."
+  },
+  {
+    "id": "1407626b-c745-4440-bc77-e93214d078ce",
+    "name": "Jasmine Lopez",
+    "role": "Builder",
+    "skills": [
+      "Explosives",
+      "Negotiation",
+      "Repair"
+    ],
+    "location": "Safehouse",
+    "status": "Zombie",
+    "health_status": "Medium",
+    "age": 37,
+    "contact": "+92-3603390202",
+    "emergency": "Channel-1",
+    "description": "Jasmine Lopez is a skilled builder known for explosives and explosives."
+  },
+  {
+    "id": "d67a1bd7-2357-48e4-9281-412a83af3c08",
+    "name": "Nina James",
+    "role": "Driver",
+    "skills": [
+      "Cooking",
+      "Repair"
+    ],
+    "location": "Zone A",
+    "status": "Zombie",
+    "health_status": "Critical",
+    "age": 33,
+    "contact": "+92-3428613318",
+    "emergency": "Channel-1",
+    "description": "Nina James is a skilled driver known for cooking and repair."
+  },
+  {
+    "id": "2407823f-1aa9-49bf-8c38-1850f18eb41d",
+    "name": "Rosa Khan",
+    "role": "Cook",
+    "skills": [
+      "Stealth",
+      "Botany",
+      "Hacking"
+    ],
+    "location": "Safehouse",
+    "status": "Injured",
+    "health_status": "High",
+    "age": 34,
+    "contact": "+92-3565668458",
+    "emergency": "Channel-2",
+    "description": "Rosa Khan is a skilled cook known for hacking and stealth."
+  },
+  {
+    "id": "b28f7772-5e53-415c-8bd3-8e119f2cc1c8",
+    "name": "Aiden Murphy",
+    "role": "Leader",
+    "skills": [
+      "Tracking",
+      "Wilderness Survival",
+      "Botany"
+    ],
+    "location": "Zone A",
+    "status": "Zombie",
+    "health_status": "High",
+    "age": 46,
+    "contact": "+92-3667331611",
+    "emergency": "Channel-8",
+    "description": "Aiden Murphy is a skilled leader known for tracking and tracking."
+  },
+  {
+    "id": "a857c2d3-5f5b-4c08-ba2f-865478c34e76",
+    "name": "Marcus Kim",
+    "role": "Farmer",
+    "skills": [
+      "Stealth",
+      "Scouting"
+    ],
+    "location": "Sector 5",
+    "status": "Zombie",
+    "health_status": "Medium",
+    "age": 47,
+    "contact": "+92-3166631691",
+    "emergency": "Channel-2",
+    "description": "Marcus Kim is a skilled farmer known for stealth and stealth."
+  },
+  {
+    "id": "6f56cdc4-43ce-4d37-a433-8dcb8e476b80",
+    "name": "Ivy Ali",
+    "role": "Hacker",
+    "skills": [
+      "Stealth",
+      "Survival"
+    ],
+    "location": "Zone A",
+    "status": "Alive",
+    "health_status": "High",
+    "age": 48,
+    "contact": "+92-3183952613",
+    "emergency": "Channel-1",
+    "description": "Ivy Ali is a skilled hacker known for stealth and stealth."
+  },
+  {
+    "id": "af7ac059-9915-4f95-abef-0541eb25883e",
+    "name": "Zane Drake",
+    "role": "Cook",
+    "skills": [
+      "Tracking",
+      "Cooking",
+      "Medical Training"
+    ],
+    "location": "Zone B",
+    "status": "Injured",
+    "health_status": "High",
+    "age": 62,
+    "contact": "+92-3870952953",
+    "emergency": "Channel-9",
+    "description": "Zane Drake is a skilled cook known for medical training and cooking."
+  },
+  {
+    "id": "881e1d6e-9143-4733-8959-033dafa262b7",
+    "name": "Eli Bishop",
+    "role": "Builder",
+    "skills": [
+      "Hacking",
+      "Negotiation"
+    ],
+    "location": "Sector 5",
+    "status": "Alive",
+    "health_status": "Medium",
+    "age": 39,
+    "contact": "+92-3867535330",
+    "emergency": "Channel-1",
+    "description": "Eli Bishop is a skilled builder known for negotiation and hacking."
+  },
+  {
+    "id": "66965ea4-3309-49b9-ac8a-4278a1acfa96",
+    "name": "Marcus Drake",
+    "role": "Cook",
+    "skills": [
+      "Medical Training",
+      "Wilderness Survival"
+    ],
+    "location": "Sector 5",
+    "status": "Zombie",
+    "health_status": "Low",
+    "age": 48,
+    "contact": "+92-3604452299",
+    "emergency": "Channel-8",
+    "description": "Marcus Drake is a skilled cook known for wilderness survival and medical training."
+  },
+  {
+    "id": "6c64391f-f49a-43fd-9e47-34a85c3a798a",
+    "name": "Grace Drake",
+    "role": "Civilian",
+    "skills": [
+      "Scouting",
+      "Sharpshooting"
+    ],
+    "location": "Zone A",
+    "status": "Injured",
+    "health_status": "Low",
+    "age": 37,
+    "contact": "+92-3452619635",
+    "emergency": "Channel-6",
+    "description": "Grace Drake is a skilled civilian known for scouting and sharpshooting."
+  },
+  {
+    "id": "409b25e0-456b-45c6-8f10-e9f17712dc77",
+    "name": "Lara Drake",
+    "role": "Survivalist",
+    "skills": [
+      "Stealth",
+      "Medical Training"
+    ],
+    "location": "Safehouse",
+    "status": "Missing",
+    "health_status": "High",
+    "age": 70,
+    "contact": "+92-3377979745",
+    "emergency": "Channel-1",
+    "description": "Lara Drake is a skilled survivalist known for medical training and stealth."
+  },
+  {
+    "id": "e65b9a26-97d1-4a04-9d4e-38dda64ae95d",
+    "name": "Jasmine Nguyen",
+    "role": "Scout",
+    "skills": [
+      "Negotiation",
+      "Engineering",
+      "Tracking",
+      "Hacking"
+    ],
+    "location": "Camp Echo",
+    "status": "Injured",
+    "health_status": "Critical",
+    "age": 36,
+    "contact": "+92-3106245639",
+    "emergency": "Channel-8",
+    "description": "Jasmine Nguyen is a skilled scout known for negotiation and tracking."
+  },
+  {
+    "id": "2b853192-f9e7-4bb4-ae24-2d8bd8dc8316",
+    "name": "Aiden Khan",
+    "role": "Scout",
+    "skills": [
+      "Survival",
+      "Scouting",
+      "Wilderness Survival",
+      "Cooking"
+    ],
+    "location": "Camp Echo",
+    "status": "Injured",
+    "age": "43",
+    "contact": "+92-3313823904",
+    "emergency": "Channel-10",
+    "description": "Aiden Khan is a skilled scout known for wilderness survival and wilderness survival.",
+    "health_status": "Low"
+  },
+  {
+    "id": "48d00bd6-fe66-48a3-b0b6-5ffe7a2ce29f",
+    "name": "Jasmine Stone",
+    "role": "Medic",
+    "skills": [
+      "Botany",
+      "Negotiation",
+      "Wilderness Survival",
+      "Engineering"
+    ],
+    "location": "Safehouse",
+    "status": "Alive",
+    "health_status": "Critical",
+    "age": 44,
+    "contact": "+92-3332085205",
+    "emergency": "Channel-7",
+    "description": "Jasmine Stone is a skilled medic known for negotiation and negotiation."
+  },
+  {
+    "id": "e150cf82-3621-494c-a5b2-ab3dbe59cb52",
+    "name": "Tanya Murphy",
+    "role": "Farmer",
+    "skills": [
+      "Survival",
+      "Hacking"
+    ],
+    "location": "Zone B",
+    "status": "Missing",
+    "health_status": "High",
+    "age": 48,
+    "contact": "+92-3102580122",
+    "emergency": "Channel-3",
+    "description": "Tanya Murphy is a skilled farmer known for hacking and hacking."
+  },
+  {
+    "id": "72f52ad8-df71-4b86-886b-3d755773861f",
+    "name": "Leila Watson",
+    "role": "Hacker",
+    "skills": [
+      "Engineering",
+      "First Aid",
+      "Botany"
+    ],
+    "location": "Safehouse",
+    "status": "Zombie",
+    "health_status": "Low",
+    "age": 26,
+    "contact": "+92-3336428899",
+    "emergency": "Channel-6",
+    "description": "Leila Watson is a skilled hacker known for first aid and engineering."
+  },
+  {
+    "id": "aa27dd14-5fb8-451d-af86-c05ec7421141",
+    "name": "Rosa Murphy",
+    "role": "Hacker",
+    "skills": [
+      "Survival",
+      "Medical Training",
+      "Hacking"
+    ],
+    "location": "Camp Echo",
+    "status": "Alive",
+    "health_status": "Medium",
+    "age": 70,
+    "contact": "+92-3521032796",
+    "emergency": "Channel-5",
+    "description": "Rosa Murphy is a skilled hacker known for hacking and hacking."
+  },
+  {
+    "id": "f1297616-4cda-4a25-b98e-8b41ca7e012e",
+    "name": "Lara Choi",
+    "role": "Builder",
+    "skills": [
+      "Negotiation",
+      "First Aid",
+      "Sharpshooting"
+    ],
+    "location": "Safehouse",
+    "status": "Alive",
+    "health_status": "Critical",
+    "age": 46,
+    "contact": "+92-3661058162",
+    "emergency": "Channel-1",
+    "description": "Lara Choi is a skilled builder known for first aid and negotiation."
+  },
+  {
+    "id": "f71bd446-1b4f-43b3-9501-091576c3a318",
+    "name": "Grace James",
+    "role": "Mechanic",
+    "skills": [
+      "Wilderness Survival",
+      "Tracking",
+      "Stealth"
+    ],
+    "location": "Zone B",
+    "status": "Injured",
+    "health_status": "Medium",
+    "age": 16,
+    "contact": "+92-3604359175",
+    "emergency": "Channel-1",
+    "description": "Grace James is a skilled mechanic known for stealth and wilderness survival."
+  },
+  {
+    "id": "729fb06e-e388-4f7f-8538-03cba094c87f",
+    "name": "Liam Nguyen",
+    "role": "Builder",
+    "skills": [
+      "Survival",
+      "Medical Training",
+      "Sharpshooting",
+      "Wilderness Survival"
+    ],
+    "location": "Camp Echo",
+    "status": "Missing",
+    "health_status": "High",
+    "age": 47,
+    "contact": "+92-3933977384",
+    "emergency": "Channel-6",
+    "description": "Liam Nguyen is a skilled builder known for sharpshooting and medical training."
+  },
+  {
+    "id": "b22fa2bd-3058-439a-accc-43571225870a",
+    "name": "Aiden Smith",
+    "role": "Sniper",
+    "skills": [
+      "Botany",
+      "Hacking",
+      "Survival",
+      "Medical Training"
+    ],
+    "location": "Sector 5",
+    "status": "Alive",
+    "health_status": "High",
+    "age": 44,
+    "contact": "+92-3522047675",
+    "emergency": "Channel-4",
+    "description": "Aiden Smith is a skilled sniper known for botany and survival."
+  },
+  {
+    "id": "44b134e2-29cf-44c3-9b1c-331c5e8348bd",
+    "name": "Riley Nguyen",
+    "role": "Cook",
+    "skills": [
+      "Medical Training",
+      "First Aid",
+      "Wilderness Survival",
+      "Stealth"
+    ],
+    "location": "Safehouse",
+    "status": "Injured",
+    "health_status": "High",
+    "age": 60,
+    "contact": "+92-3123353408",
+    "emergency": "Channel-6",
+    "description": "Riley Nguyen is a skilled cook known for medical training and stealth."
+  },
+  {
+    "id": "829b2db6-d6ea-4c5e-b219-5fe2560a5200",
+    "name": "Jasmine Khan",
+    "role": "Civilian",
+    "skills": [
+      "Explosives",
+      "Stealth",
+      "Scouting"
+    ],
+    "location": "Tower Ruins",
+    "status": "Zombie",
+    "health_status": "Low",
+    "age": 54,
+    "contact": "+92-3626761358",
+    "emergency": "Channel-2",
+    "description": "Jasmine Khan is a skilled civilian known for scouting and stealth."
+  },
+  {
+    "id": "0a7a5e57-2788-4cfa-9179-88c719da37b8",
+    "name": "Victor Frost",
+    "role": "Guard",
+    "skills": [
+      "Botany",
+      "Survival"
+    ],
+    "location": "Sector 5",
+    "status": "Missing",
+    "health_status": "High",
+    "age": 68,
+    "contact": "+92-3475458674",
+    "emergency": "Channel-5",
+    "description": "Victor Frost is a skilled guard known for survival and survival."
+  },
+  {
+    "id": "238ace20-e459-40ed-bfa8-99430be90f91",
+    "name": "Leila Vega",
+    "role": "Scout",
+    "skills": [
+      "Survival",
+      "Sharpshooting",
+      "Botany",
+      "Negotiation"
+    ],
+    "location": "Camp Echo",
+    "status": "Zombie",
+    "health_status": "Critical",
+    "age": 67,
+    "contact": "+92-3790994941",
+    "emergency": "Channel-8",
+    "description": "Leila Vega is a skilled scout known for botany and negotiation."
+  },
+  {
+    "id": "237c9251-6328-44c2-9b94-3aa5a09e0fa8",
+    "name": "Grace Watson",
+    "role": "Scientist",
+    "skills": [
+      "Repair",
+      "Cooking",
+      "Scouting"
+    ],
+    "location": "Sector 5",
+    "status": "Missing",
+    "health_status": "Critical",
+    "age": 23,
+    "contact": "+92-3405382486",
+    "emergency": "Channel-2",
+    "description": "Grace Watson is a skilled scientist known for cooking and scouting."
+  },
+  {
+    "id": "6971b9f6-351c-4192-9f6b-528aa0c48e59",
+    "name": "Liam Vega",
+    "role": "Cook",
+    "skills": [
+      "Tracking",
+      "Bartering",
+      "Cooking"
+    ],
+    "location": "Sector 5",
+    "status": "Missing",
+    "health_status": "Critical",
+    "age": 19,
+    "contact": "+92-3782559618",
+    "emergency": "Channel-3",
+    "description": "Liam Vega is a skilled cook known for tracking and bartering."
+  },
+  {
+    "id": "5c9a1407-03e1-4255-94ce-52bc4fc413fa",
+    "name": "Noah Walker",
+    "role": "Scout",
+    "skills": [
+      "Repair",
+      "Cooking",
+      "Sharpshooting"
+    ],
+    "location": "Safehouse",
+    "status": "Missing",
+    "health_status": "Low",
+    "age": 40,
+    "contact": "+92-3919981767",
+    "emergency": "Channel-2",
+    "description": "Noah Walker is a skilled scout known for cooking and cooking."
+  },
+  {
+    "id": "3c9a3f46-2c95-41c1-92f0-3214cac4148c",
+    "name": "Liam Khan",
+    "role": "Engineer",
+    "skills": [
+      "Negotiation",
+      "Survival"
+    ],
+    "location": "Tower Ruins",
+    "status": "Missing",
+    "health_status": "Medium",
+    "age": 40,
+    "contact": "+92-3170246729",
+    "emergency": "Channel-5",
+    "description": "Liam Khan is a skilled engineer known for negotiation and negotiation."
+  },
+  {
+    "id": "e656378b-e26d-4cba-97ca-baeeb3320e19",
+    "name": "Tanya Stone",
+    "role": "Fighter",
+    "skills": [
+      "Negotiation",
+      "Wilderness Survival"
+    ],
+    "location": "Camp Echo",
+    "status": "Missing",
+    "health_status": "High",
+    "age": 39,
+    "contact": "+92-3216324428",
+    "emergency": "Channel-4",
+    "description": "Tanya Stone is a skilled fighter known for negotiation and negotiation."
+  },
+  {
+    "id": "fb3fdf16-2eb7-4f75-91fd-c8c6c3aa98e9",
+    "name": "Liam Kim",
+    "role": "Fighter",
+    "skills": [
+      "Cooking",
+      "Engineering"
+    ],
+    "location": "Safehouse",
+    "status": "Injured",
+    "health_status": "Critical",
+    "age": 41,
+    "contact": "+92-3167008526",
+    "emergency": "Channel-7",
+    "description": "Liam Kim is a skilled fighter known for engineering and engineering."
+  },
+  {
+    "id": "afcae68f-d88a-4553-a37d-c1331d04df0e",
+    "name": "Harper Wells",
+    "role": "Cook",
+    "skills": [
+      "Tracking",
+      "Botany"
+    ],
+    "location": "Camp Echo",
+    "status": "Zombie",
+    "health_status": "High",
+    "age": 17,
+    "contact": "+92-3395208317",
+    "emergency": "Channel-4",
+    "description": "Harper Wells is a skilled cook known for tracking and botany."
+  },
+  {
+    "id": "f632a466-30a5-4a79-8f64-53f26ffa7acd",
+    "name": "Jasmine Drake",
+    "role": "Hacker",
+    "skills": [
+      "Botany",
+      "Sharpshooting"
+    ],
+    "location": "Zone A",
+    "status": "Zombie",
+    "health_status": "Low",
+    "age": 40,
+    "contact": "+92-3821850968",
+    "emergency": "Channel-6",
+    "description": "Jasmine Drake is a skilled hacker known for sharpshooting and sharpshooting."
+  },
+  {
+    "id": "363b7c0d-246d-4cc5-aa0e-ae85b13c6628",
+    "name": "Carlos Grant",
+    "role": "Guard",
+    "skills": [
+      "Tracking",
+      "Cooking",
+      "Survival",
+      "First Aid"
+    ],
+    "location": "Camp Echo",
+    "status": "Alive",
+    "health_status": "Low",
+    "age": 30,
+    "contact": "+92-3516380920",
+    "emergency": "Channel-4",
+    "description": "Carlos Grant is a skilled guard known for tracking and cooking."
+  },
+  {
+    "id": "fb251954-c30e-4bc9-b339-ac86627b3fef",
+    "name": "Noah James",
+    "role": "Civilian",
+    "skills": [
+      "Botany",
+      "Scouting",
+      "Negotiation"
+    ],
+    "location": "Camp Echo",
+    "status": "Zombie",
+    "health_status": "Medium",
+    "age": 35,
+    "contact": "+92-3732921427",
+    "emergency": "Channel-8",
+    "description": "Noah James is a skilled civilian known for negotiation and negotiation."
+  },
+  {
+    "id": "38086dcf-a62b-4c91-91d0-4586f49a19bc",
+    "name": "Tanya Frost",
+    "role": "Medic",
+    "skills": [
+      "Engineering",
+      "Medical Training"
+    ],
+    "location": "Sector 5",
+    "status": "Alive",
+    "health_status": "Medium",
+    "age": 48,
+    "contact": "+92-3483371291",
+    "emergency": "Channel-10",
+    "description": "Tanya Frost is a skilled medic known for engineering and engineering."
+  },
+  {
+    "id": "2ec98ecf-2cab-431d-b4e8-ec78bbefe306",
+    "name": "Liam Murphy",
+    "role": "Mechanic",
+    "skills": [
+      "Survival",
+      "Botany",
+      "Tracking"
+    ],
+    "location": "Tower Ruins",
+    "status": "Missing",
+    "health_status": "Critical",
+    "age": 22,
+    "contact": "+92-3190178903",
+    "emergency": "Channel-4",
+    "description": "Liam Murphy is a skilled mechanic known for botany and botany."
+  },
+  {
+    "id": "528d36f6-e9bd-4749-810c-7eeb3860cc2f",
+    "name": "Mason Grant",
+    "role": "Medic",
+    "skills": [
+      "Survival",
+      "Negotiation"
+    ],
+    "location": "Safehouse",
+    "status": "Alive",
+    "health_status": "Medium",
+    "age": 58,
+    "contact": "+92-3933229536",
+    "emergency": "Channel-2",
+    "description": "Mason Grant is a skilled medic known for survival and negotiation."
+  },
+  {
+    "id": "60b4b66b-332e-470e-9da2-7ca35689bd75",
+    "name": "Mason Ali",
+    "role": "Builder",
+    "skills": [
+      "Wilderness Survival",
+      "Medical Training"
+    ],
+    "location": "Tower Ruins",
+    "status": "Missing",
+    "health_status": "High",
+    "age": 50,
+    "contact": "+92-3938990393",
+    "emergency": "Channel-10",
+    "description": "Mason Ali is a skilled builder known for wilderness survival and medical training."
+  },
+  {
+    "id": "cbf7200f-fce2-4a78-9460-81e7e17b8aec",
+    "name": "Tanya Ali",
+    "role": "Hacker",
+    "skills": [
+      "Scouting",
+      "Negotiation",
+      "Repair",
+      "Sharpshooting"
+    ],
+    "location": "Zone B",
+    "status": "Zombie",
+    "health_status": "High",
+    "age": 49,
+    "contact": "+92-3917644725",
+    "emergency": "Channel-3",
+    "description": "Tanya Ali is a skilled hacker known for negotiation and negotiation."
+  },
+  {
+    "id": "372113d5-d3fc-4300-907e-1b5c95275b00",
+    "name": "Leila Nguyen",
+    "role": "Builder",
+    "skills": [
+      "Survival",
+      "Stealth",
+      "Tracking",
+      "Bartering"
+    ],
+    "location": "Camp Echo",
+    "status": "Injured",
+    "health_status": "High",
+    "age": 23,
+    "contact": "+92-3351228574",
+    "emergency": "Channel-10",
+    "description": "Leila Nguyen is a skilled builder known for survival and stealth."
+  },
+  {
+    "id": "3f096c02-f114-41a0-bd2e-457a2a138495",
+    "name": "Riley Khan",
+    "role": "Farmer",
+    "skills": [
+      "Negotiation",
+      "Sharpshooting",
+      "Explosives",
+      "Wilderness Survival"
+    ],
+    "location": "Zone A",
+    "status": "Alive",
+    "health_status": "High",
+    "age": 26,
+    "contact": "+92-3501942714",
+    "emergency": "Channel-2",
+    "description": "Riley Khan is a skilled farmer known for explosives and negotiation."
+  },
+  {
+    "id": "b24952cc-f5b6-4e83-b8d1-a9a46b44436c",
+    "name": "Zane Watson",
+    "role": "Hacker",
+    "skills": [
+      "First Aid",
+      "Medical Training"
+    ],
+    "location": "Safehouse",
+    "status": "Zombie",
+    "health_status": "Critical",
+    "age": 25,
+    "contact": "+92-3700038324",
+    "emergency": "Channel-4",
+    "description": "Zane Watson is a skilled hacker known for first aid and first aid."
+  },
+  {
+    "id": "74fedd3b-ced2-44e4-b6ad-c9ac901fab58",
+    "name": "Harper Ali",
+    "role": "Cook",
+    "skills": [
+      "Cooking",
+      "Hacking",
+      "Engineering",
+      "Survival"
+    ],
+    "location": "Zone A",
+    "status": "Injured",
+    "health_status": "Medium",
+    "age": 57,
+    "contact": "+92-3532069006",
+    "emergency": "Channel-7",
+    "description": "Harper Ali is a skilled cook known for engineering and cooking."
+  },
+  {
+    "id": "669bdc2d-71fd-40af-8909-2942473029a4",
+    "name": "Jasmine Murphy",
+    "role": "Driver",
+    "skills": [
+      "Repair",
+      "Tracking",
+      "Bartering",
+      "Cooking"
+    ],
+    "location": "Zone B",
+    "status": "Injured",
+    "health_status": "Medium",
+    "age": 69,
+    "contact": "+92-3290081325",
+    "emergency": "Channel-8",
+    "description": "Jasmine Murphy is a skilled driver known for repair and cooking."
+  },
+  {
+    "id": "8bfdd14c-cb21-4e26-9467-b51418c9e82c",
+    "name": "Nina Stone",
+    "role": "Medic",
+    "skills": [
+      "Stealth",
+      "Medical Training",
+      "Negotiation",
+      "Botany"
+    ],
+    "location": "Sector 5",
+    "status": "Missing",
+    "health_status": "High",
+    "age": 34,
+    "contact": "+92-3946707948",
+    "emergency": "Channel-9",
+    "description": "Nina Stone is a skilled medic known for stealth and medical training."
+  },
+  {
+    "id": "c35bb7c2-5f2b-4fdd-aae3-d301f997f998",
+    "name": "Lara Sato",
+    "role": "Survivalist",
+    "skills": [
+      "Wilderness Survival",
+      "Scouting"
+    ],
+    "location": "Safehouse",
+    "status": "Injured",
+    "health_status": "Medium",
+    "age": 25,
+    "contact": "+92-3916450234",
+    "emergency": "Channel-8",
+    "description": "Lara Sato is a skilled survivalist known for scouting and wilderness survival."
+  },
+  {
+    "id": "ea9621c3-c409-43d0-9593-9022900bc774",
+    "name": "Dia Choi",
+    "role": "Survivalist",
+    "skills": [
+      "Botany",
+      "Tracking",
+      "Repair"
+    ],
+    "location": "Zone B",
+    "status": "Zombie",
+    "health_status": "Medium",
+    "age": 39,
+    "contact": "+92-3490210189",
+    "emergency": "Channel-7",
+    "description": "Dia Choi is a skilled survivalist known for tracking and tracking."
+  },
+  {
+    "id": "e07fefa7-0dd1-4715-86f1-6eaa657c7a10",
+    "name": "Nina Drake",
+    "role": "Builder",
+    "skills": [
+      "Explosives",
+      "Survival"
+    ],
+    "location": "Zone A",
+    "status": "Zombie",
+    "health_status": "Critical",
+    "age": 52,
+    "contact": "+92-3491797325",
+    "emergency": "Channel-6",
+    "description": "Nina Drake is a skilled builder known for survival and survival."
+  },
+  {
+    "id": "1f1a71a2-b400-4960-990f-6a648c732a3e",
+    "name": "Tanya Wells",
+    "role": "Leader",
+    "skills": [
+      "Bartering",
+      "Survival",
+      "Wilderness Survival"
+    ],
+    "location": "Safehouse",
+    "status": "Zombie",
+    "health_status": "High",
+    "age": 70,
+    "contact": "+92-3894650346",
+    "emergency": "Channel-6",
+    "description": "Tanya Wells is a skilled leader known for survival and survival."
+  },
+  {
+    "id": "42bcaeae-ca4e-4720-8106-a5d645444527",
+    "name": "Aiden Kim",
+    "role": "Engineer",
+    "skills": [
+      "Negotiation",
+      "Sharpshooting",
+      "Tracking",
+      "Cooking"
+    ],
+    "location": "Zone A",
+    "status": "Alive",
+    "health_status": "Critical",
+    "age": 25,
+    "contact": "+92-3196556182",
+    "emergency": "Channel-1",
+    "description": "Aiden Kim is a skilled engineer known for negotiation and tracking."
+  },
+  {
+    "id": "dd2f2692-339a-4491-a5cb-b6b79f9f8194",
+    "name": "Lara Walker",
+    "role": "Engineer",
+    "skills": [
+      "Repair",
+      "Bartering",
+      "Wilderness Survival"
+    ],
+    "location": "Camp Echo",
+    "status": "Injured",
+    "health_status": "Low",
+    "age": 25,
+    "contact": "+92-3929700629",
+    "emergency": "Channel-8",
+    "description": "Lara Walker is a skilled engineer known for repair and repair."
+  },
+  {
+    "id": "090da2b5-1cd3-4c1f-800e-fa3014badb27",
+    "name": "Grace Nguyen",
+    "role": "Cook",
+    "skills": [
+      "Hacking",
+      "Repair",
+      "Wilderness Survival",
+      "Stealth"
+    ],
+    "location": "Tower Ruins",
+    "status": "Missing",
+    "health_status": "Low",
+    "age": 34,
+    "contact": "+92-3350471096",
+    "emergency": "Channel-6",
+    "description": "Grace Nguyen is a skilled cook known for wilderness survival and repair."
+  },
+  {
+    "id": "fa19f368-724c-4299-83a1-c669d911f55d",
+    "name": "Jasmine Kim",
+    "role": "Sniper",
+    "skills": [
+      "First Aid",
+      "Bartering"
+    ],
+    "location": "Safehouse",
+    "status": "Injured",
+    "health_status": "Critical",
+    "age": 38,
+    "contact": "+92-3200198228",
+    "emergency": "Channel-9",
+    "description": "Jasmine Kim is a skilled sniper known for first aid and bartering."
+  },
+  {
+    "id": "a0c16271-61de-4b53-adfa-8e59228e3eec",
+    "name": "Carlos Stone",
+    "role": "Leader",
+    "skills": [
+      "Tracking",
+      "First Aid"
+    ],
+    "location": "Zone A",
+    "status": "Alive",
+    "health_status": "Low",
+    "age": 44,
+    "contact": "+92-3336470685",
+    "emergency": "Channel-9",
+    "description": "Carlos Stone is a skilled leader known for tracking and first aid."
+  },
+  {
+    "id": "1dd757f6-7380-48d5-818b-95bc6d15911e",
+    "name": "Nina Lopez",
+    "role": "Driver",
+    "skills": [
+      "Bartering",
+      "Wilderness Survival"
+    ],
+    "location": "Sector 5",
+    "status": "Missing",
+    "health_status": "High",
+    "age": 56,
+    "contact": "+92-3923370144",
+    "emergency": "Channel-4",
+    "description": "Nina Lopez is a skilled driver known for bartering and wilderness survival."
+  },
+  {
+    "id": "3a144e75-be3d-4cf2-8a4e-c3596f708990",
+    "name": "Dia Watson",
+    "role": "Farmer",
+    "skills": [
+      "Medical Training",
+      "Repair",
+      "Botany",
+      "Wilderness Survival"
+    ],
+    "location": "Camp Echo",
+    "status": "Alive",
+    "health_status": "High",
+    "age": 19,
+    "contact": "+92-3100066212",
+    "emergency": "Channel-4",
+    "description": "Dia Watson is a skilled farmer known for wilderness survival and repair."
+  },
+  {
+    "id": "187a7948-0aac-44ff-a629-ddeab326bb18",
+    "name": "Nina Reed",
+    "role": "Leader",
+    "skills": [
+      "Negotiation",
+      "Bartering"
+    ],
+    "location": "Camp Echo",
+    "status": "Missing",
+    "health_status": "Critical",
+    "age": 16,
+    "contact": "+92-3240444129",
+    "emergency": "Channel-5",
+    "description": "Nina Reed is a skilled leader known for negotiation and bartering."
+  },
+  {
+    "id": "9252bbed-8009-42c1-a21c-ee109528f6e8",
+    "name": "Ivy Murphy",
+    "role": "Mechanic",
+    "skills": [
+      "Explosives",
+      "Repair",
+      "Medical Training"
+    ],
+    "location": "Safehouse",
+    "status": "Injured",
+    "health_status": "Critical",
+    "age": 20,
+    "contact": "+92-3895223329",
+    "emergency": "Channel-4",
+    "description": "Ivy Murphy is a skilled mechanic known for explosives and explosives."
+  },
+  {
+    "id": "7948948c-836e-43a7-80d4-5384ac4877ab",
+    "name": "Rosa Ali",
+    "role": "Survivalist",
+    "skills": [
+      "Cooking",
+      "Stealth",
+      "Engineering"
+    ],
+    "location": "Safehouse",
+    "status": "Zombie",
+    "health_status": "High",
+    "age": 58,
+    "contact": "+92-3742763668",
+    "emergency": "Channel-9",
+    "description": "Rosa Ali is a skilled survivalist known for engineering and stealth."
+  },
+  {
+    "id": "3b312440-bd72-4b01-9a4c-f143b169c8fe",
+    "name": "Riley Frost",
+    "role": "Scout",
+    "skills": [
+      "Sharpshooting",
+      "Survival",
+      "Scouting"
+    ],
+    "location": "Zone B",
+    "status": "Zombie",
+    "health_status": "Critical",
+    "age": 29,
+    "contact": "+92-3919150587",
+    "emergency": "Channel-8",
+    "description": "Riley Frost is a skilled scout known for sharpshooting and survival."
+  },
+  {
+    "id": "05c05157-de0a-4777-9957-841f715d98a9",
+    "name": "Victor Drake",
+    "role": "Builder",
+    "skills": [
+      "Survival",
+      "Bartering"
+    ],
+    "location": "Tower Ruins",
+    "status": "Missing",
+    "health_status": "Medium",
+    "age": 33,
+    "contact": "+92-3875535775",
+    "emergency": "Channel-1",
+    "description": "Victor Drake is a skilled builder known for bartering and bartering."
+  },
+  {
+    "id": "3320dfb5-5b9b-46cd-bf30-3e4db081e578",
+    "name": "Dia Bishop",
+    "role": "Farmer",
+    "skills": [
+      "Hacking",
+      "Survival"
+    ],
+    "location": "Sector 5",
+    "status": "Zombie",
+    "health_status": "Low",
+    "age": 70,
+    "contact": "+92-3642607428",
+    "emergency": "Channel-3",
+    "description": "Dia Bishop is a skilled farmer known for survival and survival."
+  },
+  {
+    "id": "e657ea6b-bfc1-4678-90b9-f89d5a08a9a0",
+    "name": "Victor James",
+    "role": "Civilian",
+    "skills": [
+      "Engineering",
+      "Botany"
+    ],
+    "location": "Zone B",
+    "status": "Injured",
+    "health_status": "Critical",
+    "age": 68,
+    "contact": "+92-3145125312",
+    "emergency": "Channel-2",
+    "description": "Victor James is a skilled civilian known for botany and botany."
+  },
+  {
+    "id": "e27c27b1-d8cc-455e-8f5f-879c41997684",
+    "name": "Liam Ali",
+    "role": "Guard",
+    "skills": [
+      "Sharpshooting",
+      "Repair"
+    ],
+    "location": "Camp Echo",
+    "status": "Alive",
+    "health_status": "Critical",
+    "age": 42,
+    "contact": "+92-3830519414",
+    "emergency": "Channel-1",
+    "description": "Liam Ali is a skilled guard known for sharpshooting and repair."
+  },
+  {
+    "id": "a5d41806-1854-4e7a-b003-8e3fa25c0cda",
+    "name": "Dia James",
+    "role": "Guard",
+    "skills": [
+      "Botany",
+      "Negotiation",
+      "Bartering",
+      "Wilderness Survival"
+    ],
+    "location": "Tower Ruins",
+    "status": "Missing",
+    "health_status": "Low",
+    "age": 52,
+    "contact": "+92-3765836304",
+    "emergency": "Channel-10",
+    "description": "Dia James is a skilled guard known for botany and bartering."
+  },
+  {
+    "id": "4cff8aa6-b04c-43eb-9b69-2f3257e16220",
+    "name": "Leila Bishop",
+    "role": "Leader",
+    "skills": [
+      "Bartering",
+      "Tracking",
+      "Engineering"
+    ],
+    "location": "Safehouse",
+    "status": "Zombie",
+    "health_status": "Low",
+    "age": 38,
+    "contact": "+92-3772191155",
+    "emergency": "Channel-2",
+    "description": "Leila Bishop is a skilled leader known for bartering and engineering."
+  },
+  {
+    "id": "d7d92487-00aa-4de0-924c-eaa3db35655f",
+    "name": "Marcus Frost",
+    "role": "Cook",
+    "skills": [
+      "Explosives",
+      "Botany",
+      "Sharpshooting",
+      "Wilderness Survival"
+    ],
+    "location": "Camp Echo",
+    "status": "Alive",
+    "health_status": "High",
+    "age": 44,
+    "contact": "+92-3570976107",
+    "emergency": "Channel-9",
+    "description": "Marcus Frost is a skilled cook known for botany and sharpshooting."
+  },
+  {
+    "id": "b94e385d-8938-49c6-8a10-71254a4e36cd",
+    "name": "Riley Sato",
+    "role": "Survivalist",
+    "skills": [
+      "Repair",
+      "Survival",
+      "Tracking"
+    ],
+    "location": "Safehouse",
+    "status": "Zombie",
+    "health_status": "Critical",
+    "age": 40,
+    "contact": "+92-3455279016",
+    "emergency": "Channel-9",
+    "description": "Riley Sato is a skilled survivalist known for survival and survival."
+  },
+  {
+    "id": "a258715f-8eb7-4be0-8c80-aad46b1c802a",
+    "name": "Tanya Reed",
+    "role": "Driver",
+    "skills": [
+      "Hacking",
+      "Cooking",
+      "Bartering"
+    ],
+    "location": "Zone A",
+    "status": "Alive",
+    "health_status": "Low",
+    "age": 33,
+    "contact": "+92-3655548559",
+    "emergency": "Channel-5",
+    "description": "Tanya Reed is a skilled driver known for hacking and bartering."
+  },
+  {
+    "id": "95a429cf-13a8-4b31-9e88-89a7d749ea5b",
+    "name": "Zane Sato",
+    "role": "Hacker",
+    "skills": [
+      "Wilderness Survival",
+      "Bartering",
+      "Negotiation"
+    ],
+    "location": "Camp Echo",
+    "status": "Injured",
+    "health_status": "Critical",
+    "age": 36,
+    "contact": "+92-3616850044",
+    "emergency": "Channel-4",
+    "description": "Zane Sato is a skilled hacker known for wilderness survival and negotiation."
+  },
+  {
+    "id": "224a9bee-018d-466f-8962-5bf778280198",
+    "name": "Zane Grant",
+    "role": "Leader",
+    "skills": [
+      "Repair",
+      "Negotiation",
+      "Bartering"
+    ],
+    "location": "Camp Echo",
+    "status": "Alive",
+    "health_status": "Medium",
+    "age": 38,
+    "contact": "+92-3698620986",
+    "emergency": "Channel-7",
+    "description": "Zane Grant is a skilled leader known for negotiation and repair."
+  },
+  {
+    "id": "e21efea9-62b6-49cb-8be3-fa3067eaaa7c",
+    "name": "Nina Murphy",
+    "role": "Civilian",
+    "skills": [
+      "Negotiation",
+      "Tracking",
+      "Scouting",
+      "Medical Training"
+    ],
+    "location": "Tower Ruins",
+    "status": "Alive",
+    "health_status": "Medium",
+    "age": 24,
+    "contact": "+92-3279936943",
+    "emergency": "Channel-10",
+    "description": "Nina Murphy is a skilled civilian known for negotiation and negotiation."
+  },
+  {
+    "id": "72e697af-deb8-4bb1-9eb2-1617178e9c7d",
+    "name": "Riley Wells",
+    "role": "Farmer",
+    "skills": [
+      "Wilderness Survival",
+      "Repair"
+    ],
+    "location": "Sector 5",
+    "status": "Missing",
+    "health_status": "Medium",
+    "age": 60,
+    "contact": "+92-3624608232",
+    "emergency": "Channel-6",
+    "description": "Riley Wells is a skilled farmer known for wilderness survival and repair."
+  },
+  {
+    "id": "9a177c45-9b8e-45ef-9875-801731888de9",
+    "name": "Carlos Ali",
+    "role": "Driver",
+    "skills": [
+      "Tracking",
+      "Sharpshooting"
+    ],
+    "location": "Zone A",
+    "status": "Alive",
+    "health_status": "High",
+    "age": 55,
+    "contact": "+92-3656890480",
+    "emergency": "Channel-6",
+    "description": "Carlos Ali is a skilled driver known for sharpshooting and sharpshooting."
+  },
+  {
+    "id": "d78198e0-75aa-4847-b49e-4f7824953786",
+    "name": "Marcus Bishop",
+    "role": "Hacker",
+    "skills": [
+      "Wilderness Survival",
+      "Repair"
+    ],
+    "location": "Safehouse",
+    "status": "Missing",
+    "health_status": "Critical",
+    "age": 45,
+    "contact": "+92-3920417577",
+    "emergency": "Channel-7",
+    "description": "Marcus Bishop is a skilled hacker known for repair and wilderness survival."
+  },
+  {
+    "id": "ef8609db-3c99-44bb-a396-4f016c3647fa",
+    "name": "Dia Smith",
+    "role": "Civilian",
+    "skills": [
+      "Engineering",
+      "First Aid"
+    ],
+    "location": "Zone B",
+    "status": "Zombie",
+    "health_status": "High",
+    "age": 40,
+    "contact": "+92-3825697807",
+    "emergency": "Channel-10",
+    "description": "Dia Smith is a skilled civilian known for engineering and engineering."
+  },
+  {
+    "id": "85db9314-ce9e-4d8b-8b75-c5e478b5f4cd",
+    "name": "Ivy Nguyen",
+    "role": "Builder",
+    "skills": [
+      "Wilderness Survival",
+      "Negotiation"
+    ],
+    "location": "Safehouse",
+    "status": "Injured",
+    "health_status": "Critical",
+    "age": 36,
+    "contact": "+92-3178657219",
+    "emergency": "Channel-2",
+    "description": "Ivy Nguyen is a skilled builder known for negotiation and wilderness survival."
+  },
+  {
+    "id": "b801d722-1143-4ffa-aa99-221f2c81e282",
+    "name": "Riley Choi",
+    "role": "Guard",
+    "skills": [
+      "Sharpshooting",
+      "First Aid"
+    ],
+    "location": "Zone A",
+    "status": "Injured",
+    "health_status": "Low",
+    "age": 19,
+    "contact": "+92-3956467622",
+    "emergency": "Channel-9",
+    "description": "Riley Choi is a skilled guard known for sharpshooting and sharpshooting."
+  },
+  {
+    "id": "4370eecf-f21d-4491-9570-177068d56ef6",
+    "name": "Liam Frost",
+    "role": "Guard",
+    "skills": [
+      "Repair",
+      "Survival",
+      "Cooking"
+    ],
+    "location": "Sector 5",
+    "status": "Missing",
+    "health_status": "Low",
+    "age": 45,
+    "contact": "+92-3597825761",
+    "emergency": "Channel-1",
+    "description": "Liam Frost is a skilled guard known for survival and repair."
+  },
+  {
+    "id": "19ee05ed-793b-466d-b5a7-593130ed0edf",
+    "name": "Liam James",
+    "role": "Scientist",
+    "skills": [
+      "Bartering",
+      "Botany",
+      "Survival",
+      "Scouting"
+    ],
+    "location": "Zone A",
+    "status": "Injured",
+    "health_status": "Low",
+    "age": 17,
+    "contact": "+92-3927801839",
+    "emergency": "Channel-10",
+    "description": "Liam James is a skilled scientist known for bartering and scouting."
+  },
+  {
+    "id": "cc668358-8d15-4289-88df-e4b7dc4bcf0c",
+    "name": "Aiden Walker",
+    "role": "Sniper",
+    "skills": [
+      "Botany",
+      "Scouting",
+      "Wilderness Survival",
+      "First Aid"
+    ],
+    "location": "Zone B",
+    "status": "Missing",
+    "health_status": "High",
+    "age": 51,
+    "contact": "+92-3807707507",
+    "emergency": "Channel-3",
+    "description": "Aiden Walker is a skilled sniper known for wilderness survival and wilderness survival."
+  },
+  {
+    "id": "382e2bee-b0d8-4bdb-956c-db72043047ae",
+    "name": "Tanya Grant",
+    "role": "Scientist",
+    "skills": [
+      "Survival",
+      "Negotiation",
+      "Wilderness Survival",
+      "Explosives"
+    ],
+    "location": "Safehouse",
+    "status": "Injured",
+    "health_status": "Medium",
+    "age": 68,
+    "contact": "+92-3250549971",
+    "emergency": "Channel-4",
+    "description": "Tanya Grant is a skilled scientist known for survival and survival."
+  },
+  {
+    "id": "24c35a43-e371-4b5d-97bc-425cc5afb86a",
+    "name": "Nina Vega",
+    "role": "Hacker",
+    "skills": [
+      "Wilderness Survival",
+      "Survival",
+      "Engineering"
+    ],
+    "location": "Zone B",
+    "status": "Zombie",
+    "health_status": "Critical",
+    "age": 56,
+    "contact": "+92-3880083694",
+    "emergency": "Channel-9",
+    "description": "Nina Vega is a skilled hacker known for survival and survival."
+  },
+  {
+    "id": "61c1d32b-8664-45f8-ab0f-860af6ac1597",
+    "name": "Jasmin",
+    "role": "Builder",
+    "skills": [
+      "Networking",
+      "Lifting"
+    ],
+    "location": "Unknown",
+    "status": "Alive",
+    "age": "65",
+    "contact": "79749302422 ",
+    "emergency": "22222222",
+    "description": "",
+    "health_status": "Low"
+  },
+  {
+    "id": "0dc6365f-4caa-424e-8d60-5f52c38aa0e2",
+    "name": "Jack Sparrow",
+    "role": "Civilian",
+    "skills": [
+      "None"
+    ],
+    "location": "Unknown",
+    "status": "Alive",
+    "age": "",
+    "contact": "",
+    "emergency": "",
+    "description": "",
+    "health_status": "Low"
+  },
+  {
+    "id": "cf447255-c083-4d2b-983b-55173cc655c8",
+    "name": "Marvel",
+    "role": "Radio Operator",
+    "skills": [
+      "Communication",
+      "Networking"
+    ],
+    "location": "Unknown",
+    "status": "Zombie",
+    "age": "24",
+    "contact": "23069130607 ",
+    "emergency": "77445215880 ",
+    "description": "",
+    "health_status": "High"
+  },
+  {
+    "id": "3d3332ad-e4c8-4619-a928-03d79dd7e6e3",
+    "name": "Scott Summers",
+    "role": "Cook",
+    "skills": [
+      "None"
+    ],
+    "location": "Unknown",
+    "status": "Alive",
+    "age": "",
+    "contact": "",
+    "emergency": "",
+    "description": "",
+    "health_status": "Low"
+  },
+  {
+    "id": "01c72790-f2e3-4b7a-b2b2-51327f898a3e",
+    "name": "Percy Jackson",
+    "role": "Leader",
+    "skills": [
+      "Navigation",
+      "Teamwork"
+    ],
+    "location": "Half-blood Camp",
+    "status": "Alive",
+    "age": "15",
+    "contact": "",
+    "emergency": "686876776",
+    "description": "Son of Posiedon",
+    "health_status": "High"
+  }
+]
