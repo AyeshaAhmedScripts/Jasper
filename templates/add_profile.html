@@ -1,0 +1,224 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {% if editing %}Edit Profile{% else %}Add Profile{% endif %}
+{% endblock %}
+
+{% block content %}
+<h1>{{ 'Edit' if editing else 'Add' }} Survivor Profile</h1>
+
+{% if message %}
+  <p style="color: red;">{{ message }}</p>
+{% endif %}
+
+<form method="POST" id="profileForm">
+  {% if editing %}
+    <input type="hidden" name="id" value="{{ profile.get('id', '') }}">
+  {% endif %}
+
+  <label for="name">Name:</label>
+  <input type="text" name="name" id="name" value="{{ profile.get('name', '') }}" {% if editing %}readonly{% endif %} required />
+
+  <label for="role">Role:</label>
+  <input list="roles" name="role" id="role" value="{{ profile.get('role', '') }}" />
+  <datalist id="roles">
+    {% for r in ['Civilian', 'Medic', 'Fighter', 'Scientist', 'Engineer', 'Scout', 'Leader', 'Cook', 'Sniper',
+                 'Mechanic', 'Farmer', 'Hacker', 'Driver', 'Guard', 'Technician', 'Survivalist', 'Tracker',
+                 'Builder', 'Pilot', 'Navigator', 'Blacksmith', 'Herbalist', 'Hunter', 'Demolition Expert',
+                 'Electrician', 'Radio Operator', 'Biologist', 'Chemist', 'Weapons Expert', 'First Responder',
+                 'Rescuer', 'Explorer', 'Strategist', 'Scavenger', 'Carpenter', 'Tailor', 'Logistics Officer', 'Spy'] %}
+      <option value="{{ r }}">
+    {% endfor %}
+  </datalist>
+
+  <label for="skills">Skills:</label>
+  {% if editing %}
+    <div id="skillTags"></div>
+    <input type="text" id="skillsInput" placeholder="Type and press Enter" />
+    <input type="hidden" name="skills" id="skillsHidden" />
+  {% else %}
+    <input type="text" name="skills" id="skills" placeholder="Separate multiple skills with commas" value="{{ profile.get('skills', '') }}" />
+  {% endif %}
+
+  <label for="location">Location:</label>
+  <input type="text" name="location" id="location" value="{{ profile.get('location', '') }}" />
+
+  <label for="status">Status:</label>
+  <select name="status" id="status">
+    {% for s in ['Alive', 'Injured', 'Zombie', 'Missing'] %}
+      <option value="{{ s }}" {% if profile.get('status', '') == s %}selected{% endif %}>{{ s }}</option>
+    {% endfor %}
+  </select>
+
+  <label for="health_status">Health Status:</label>
+  <select name="health_status" id="health_status">
+    {% for level in ['Low', 'Medium', 'High', 'Critical'] %}
+      <option value="{{ level }}" {% if profile.get('health_status', '') == level %}selected{% endif %}>{{ level }}</option>
+    {% endfor %}
+  </select>
+
+  <label for="age">Age:</label>
+  <input type="number" name="age" id="age" value="{{ profile.get('age', '') }}" min="0" />
+
+  <label for="contact">Contact Number:</label>
+  <input type="text" name="contact" id="contact" value="{{ profile.get('contact', '') }}" />
+
+  <label for="emergency">Emergency Contact / Radio Channel:</label>
+  <input type="text" name="emergency" id="emergency" value="{{ profile.get('emergency', '') }}" />
+
+  <label for="description">Description:</label>
+  <textarea name="description" id="description" rows="5" placeholder="Describe appearance, personality, or any critical info (optional).">{{ profile.get('description', '') }}</textarea>
+
+  <button type="submit">{{ 'Update' if editing else 'Add' }} Profile</button>
+</form>
+
+<style>
+  input, select, button, textarea {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+    background-color: #2a2a3f;
+    border: 1px solid #444;
+    color: #e8e8e8;
+  }
+
+  .skill-tag {
+    display: inline-block;
+    background-color: #19452c;
+    padding: 5px 10px;
+    margin: 5px 5px 0 0;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .duplicate-flash {
+    background-color: #661818 !important;
+  }
+</style>
+
+{% if editing %}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const skillsInput = document.getElementById("skillsInput");
+    const skillTags = document.getElementById("skillTags");
+    const skillsHidden = document.getElementById("skillsHidden");
+    let selectedSkills = [];
+
+    function capitalizeWords(str) {
+      return str.replace(/\b\w/g, c => c.toUpperCase());
+    }
+
+    function renderSkillTags() {
+      skillTags.innerHTML = "";
+      selectedSkills.forEach((skill, index) => {
+        const tag = document.createElement("span");
+        tag.className = "skill-tag";
+        tag.textContent = skill + " ✕";
+        tag.onclick = () => {
+          selectedSkills.splice(index, 1);
+          renderSkillTags();
+        };
+        skillTags.appendChild(tag);
+      });
+      skillsHidden.value = selectedSkills.length ? selectedSkills.join(", ") : "None";
+    }
+
+    skillsInput.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        const rawValue = skillsInput.value.trim();
+        if (!rawValue) return;
+        const formatted = capitalizeWords(rawValue);
+        if (!selectedSkills.includes(formatted)) {
+          selectedSkills.push(formatted);
+          renderSkillTags();
+          skillsInput.value = "";
+        } else {
+          const tagEls = document.querySelectorAll('.skill-tag');
+          const duplicateTag = Array.from(tagEls).find(el => el.textContent.startsWith(formatted));
+          if (duplicateTag) {
+            duplicateTag.classList.add("duplicate-flash");
+            setTimeout(() => duplicateTag.classList.remove("duplicate-flash"), 800);
+          }
+        }
+      }
+    });
+
+    let skillsString = `{{ profile.get('skills', '') }}`;
+    selectedSkills = skillsString.split(",").map(s => capitalizeWords(s.trim())).filter(s => s && s !== "None");
+    if (!selectedSkills.length) selectedSkills = ["None"];
+    renderSkillTags();
+  });
+</script>
+{% endif %}
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("profileForm");
+    const capitalizeInputs = ["name", "role", "location"];
+    const roleInput = document.getElementById("role");
+    const locationInput = document.getElementById("location");
+    const skillsInput = document.getElementById("skills");
+    const description = document.getElementById("description");
+
+    let isDirty = false;
+    let formSubmitted = false;
+    const formFields = form.querySelectorAll("input, textarea, select");
+
+    capitalizeInputs.forEach(id => {
+      const input = document.getElementById(id);
+      input?.addEventListener("blur", () => {
+        input.value = input.value.trim().replace(/\b\w/g, c => c.toUpperCase());
+      });
+    });
+
+    formFields.forEach(field => {
+      if (!field.id) return;
+      const saved = localStorage.getItem(field.id);
+      if (saved) field.value = saved;
+      field.addEventListener("input", () => {
+        localStorage.setItem(field.id, field.value);
+        isDirty = true;
+      });
+    });
+
+    form.addEventListener("submit", (e) => {
+      formSubmitted = true;
+      formFields.forEach(field => {
+        if (field.id) localStorage.removeItem(field.id);
+      });
+
+      if (locationInput && !locationInput.value.trim()) locationInput.value = "Unknown";
+      if (roleInput && !roleInput.value.trim()) roleInput.value = "Civilian";
+      if (skillsInput && !skillsInput.value.trim()) skillsInput.value = "None";
+    });
+
+    window.addEventListener("beforeunload", function (e) {
+      if (!formSubmitted && isDirty) {
+        e.preventDefault();
+        e.returnValue = '';
+      }
+    });
+
+    if (!{{ 'true' if editing else 'false' }}) {
+      skillsInput?.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") e.preventDefault();
+      });
+    }
+
+    form.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" && e.target.tagName.toLowerCase() !== "textarea") {
+        e.preventDefault();
+      }
+    });
+  });
+
+  document.getElementById("age").addEventListener("keydown", function (e) {
+    if (["e", "E", "+", "-"].includes(e.key)) {
+      e.preventDefault();
+    }
+  });
+</script>
+
+{% endblock %}

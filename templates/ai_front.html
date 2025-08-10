@@ -1,0 +1,257 @@
+{% extends "base.html" %}
+{% block title %}Jasper: Apocalypse Companion{% endblock %}
+
+{% block content %}
+<div class="wrapper">
+  <h1>Jasper: Apocalypse Companion</h1>
+
+  <label for="userInput">Your message to Jasper:</label>
+  <div class="input-container">
+    <textarea id="userInput" placeholder="Type your message here..."></textarea>
+    <button id="micButton" title="Speak to Jasper">🎤</button>
+  </div>
+
+  <div class="button-row">
+    <button onclick="sendToJasper()" class="button">Send</button>
+    <button onclick="clearChat()" class="button clear">Clear Chat</button>
+  </div>
+
+  <div id="output"></div>
+</div>
+
+<style>
+  .wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #252536;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+  }
+
+  h1 {
+    font-family: 'Creepster', cursive;
+    text-align: center;
+    font-size: 52px;
+    color: #e8e8e8;
+    text-shadow: 0 0 10px #146b3a, 0 0 20px #19452c;
+    margin-bottom: 40px;
+  }
+
+  label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .input-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  textarea {
+    flex: 1;
+    height: 120px;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background-color: #2a2a3f;
+    color: #e8e8e8;
+    resize: vertical;
+    box-shadow: inset 0 0 8px rgba(0, 255, 0, 0.2);
+  }
+
+  #micButton {
+    background-color: #19452c;
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 46px;
+    width: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.3);
+  }
+
+  #micButton:hover {
+    background-color: #146b3a;
+  }
+
+  #output {
+    width: 100%;
+    max-height: 250px;
+    background-color: #f4f2f2;
+    color: #000000;
+    font-family: 'Times New Roman', serif;
+    padding: 14px;
+    overflow-y: auto;
+    border-radius: 10px;
+    margin-top: 25px;
+    box-shadow: inset 0 0 10px rgba(0, 255, 100, 0.2);
+    scroll-behavior: smooth;
+  }
+
+  .button-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .button {
+    background-color: #19452c;
+    color: #e8e8e8;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 2px 6px rgba(0, 255, 0, 0.2);
+  }
+
+  .button:hover {
+    background-color: #146b3a;
+    transform: scale(1.03);
+  }
+
+  .clear {
+    background-color: #661818;
+  }
+
+  .clear:hover {
+    background-color: #882222;
+  }
+
+  mark {
+    background-color: transparent;
+    color: #4e8150;
+    text-shadow: none;
+    font-weight: normal;
+  }
+
+  @media (max-width: 600px) {
+    .input-container {
+      flex-direction: column;
+    }
+
+    #micButton {
+      align-self: flex-end;
+    }
+
+    .button-row {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .button {
+      width: 100%;
+    }
+  }
+</style>
+
+<script>
+function sendToJasper() {
+    const input = document.getElementById("userInput").value.trim();
+    if (!input) return;
+
+    const outputDiv = document.getElementById("output");
+    const userPara = document.createElement("p");
+    userPara.innerHTML = `<strong>You:</strong> ${input}`;
+    userPara.style.color = "#4a2424";
+    outputDiv.appendChild(userPara);
+
+    fetch("/jasper_reply", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: input })
+    })
+    .then(res => res.json())
+    .then(data => {
+        const jasperPara = document.createElement("p");
+        jasperPara.innerHTML = `<strong>Jasper:</strong> ${highlightKeywords(data.reply)}`;
+        jasperPara.style.color = "#244a31";
+        outputDiv.appendChild(jasperPara);
+        outputDiv.scrollTop = outputDiv.scrollHeight;
+    })
+    .catch(err => {
+        console.error("Error:", err);
+    });
+
+    document.getElementById("userInput").value = "";
+}
+
+
+function clearChat() {
+    document.getElementById("output").innerHTML = "";
+}
+
+function highlightKeywords(text) {
+    const keywords = ["medicine", "medkit", "bandage", "help", "danger", "food", "water", "infected", "supplies", "support"];
+    const regex = new RegExp(`\\b(${keywords.join("|")})\\b`, "gi");
+    return text.replace(regex, '<mark>$1</mark>');
+}
+</script>
+
+<script>
+let jasperData = [];
+
+// Load JSON on page load
+fetch('/static/data/jasper_data.json')
+
+  .then(response => response.json())
+  .then(data => {
+    jasperData = data;
+  });
+
+// Search function
+function searchJasper(query) {
+  query = query.toLowerCase();
+  let results = [];
+
+  jasperData.categories.forEach(cat => {
+    if (cat.keywords.some(k => query.includes(k.toLowerCase()))) {
+      results = results.concat(cat.responses);
+    }
+  });
+
+  if (results.length === 0) {
+    results.push("No tips found for your query. Try using different keywords.");
+  }
+
+  return results.join("\n\n");
+}
+
+
+
+  if (results.length === 0) {
+    results.push("No tips found for your query.");
+  }
+
+  return results.join("\n\n");
+}
+
+// Example: when user submits a message
+document.getElementById("send-btn").addEventListener("click", () => {
+    const userMessage = document.getElementById("user-input").value;
+
+    fetch("/jasper_reply", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: userMessage })
+    })
+    .then(res => res.json())
+    .then(data => {
+        const chatWindow = document.getElementById("chat-window");
+        chatWindow.innerHTML += `<div class="jasper-msg">${data.reply}</div>`;
+    });
+});
+
+
+{% endblock %}

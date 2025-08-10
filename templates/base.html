@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{% block title %}Zombie Survivor System{% endblock %}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+  <style>
+    body {
+      font-family: 'Times New Roman', serif;
+      background-color: #1e1e2f;
+      color: #e8e8e8;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #19452c;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropbtn {
+      background: none;
+      color: #e8e8e8;
+      font-weight: bold;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      padding: 10px 16px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .dropbtn:hover {
+      background-color: #276b3d;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #2c2c3f;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+      z-index: 1;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      color: #e8e8e8;
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #276b3d;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .nav-direct {
+      color: #e8e8e8;
+      font-weight: bold;
+      font-size: 18px;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .nav-direct:hover {
+      background-color: #276b3d;
+    }
+
+    h1 {
+      font-family: 'Creepster', cursive;
+      font-size: 48px;
+      text-align: center;
+      margin: 40px 0;
+      color: #e8e8e8;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      margin: 15px;
+      background-color: #19452c;
+      color: #e8e8e8;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 20px;
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #146b3a;
+    }
+
+    main {
+      padding: 40px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border: 1px solid #333;
+        width: 100%;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .nav-direct {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <!-- Group 1: Profiles -->
+    <div class="dropdown">
+      <button class="dropbtn">📁 Profiles</button>
+      <div class="dropdown-content">
+   
+        <a href="{{ url_for('add_profile') }}">➕ Add Profile</a>
+        <a href="{{ url_for('all_profiles') }}">📋 View All Profiles</a>
+        <a href="{{ url_for('search_filter') }}">🔍 Search & Filter</a>
+        <a href="{{ url_for('dashboard') }}">📊 Dashboard</a>
+      </div>
+    </div>
+
+    <!-- Group 2: Map -->
+    <div class="dropdown">
+      <button class="dropbtn">🗺️ Map</button>
+      <div class="dropdown-content">
+        <a href="{{ url_for('map_page') }}">🗺️ Map View</a>
+        <a href="{{ url_for('panel') }}">🎛️ Tag Panel</a>
+      </div>
+    </div>
+
+    <!-- Group 3: Jasper (Direct link) -->
+    <a class="nav-direct" href="{{ url_for('ai_front') }}">🤖 Jasper</a>
+  </nav>
+
+  <main>
+  <div class="wrapper">
+    {% block content %}{% endblock %}
+  </div>
+</main>
+
+
+</body>
+</html>
